@@ -80,6 +80,8 @@ When the control is destroyed we free the memory we allocated and call a cleanup
     ...
 ```
 
+Our internal helper function `__FreeMemProperties` used [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) to retrieve the appropriate pointer for the internal and extrenal memory blocks used to store our variables and then frees that memory with calls to [GlobalFree](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366579%28v=vs.85%29.aspx).
+
 We handle our own painting in our **SimpleButton** like so with these two messages:
 
 ```
@@ -95,7 +97,7 @@ We handle our own painting in our **SimpleButton** like so with these two messag
     ...
 ```
 
-We are specifying that we will handle erasing of our control's background ourself via our own paint function `_SB_Paint`
+We are specifying that we will handle erasing of our control's background ourself and painting of our **SimpleButton** control via our own paint function `_SB_Paint`
 
 We can also allow our **SimpleButton** control to be enabled or disabled via a standard `WM_ENABLE` message, which forces a repaint of our control. And similarly we can allow a font change and repaint via a `WM_SETFONT` message.
 
@@ -106,7 +108,7 @@ Our custom messages \(`SB_GETPROPERTY` and `SB_SETPROPERTY`\) are included as we
     .ELSEIF eax == SB_GETPROPERTY
         Invoke __GetExtProperty, hWin, wParam
         ret
-        
+
     .ELSEIF eax == SB_SETPROPERTY   
         Invoke __SetExtProperty, hWin, wParam, lParam
         ret
