@@ -12,9 +12,9 @@ The image below depicts the normal Steam client menu usage. The menu panel dropd
 
 So taking inspiration from the Steam client menu system and wanted to adapt it to a custom control in win32 assembler, I began the development of **HotMenu.**
 
-It worked by creating a rectangle shape when the mouse moved over the menu bar area, the rectangle menu panel was drawn just below this menu bar and then it iterated through a list of menu items which where in reality child static controls of text I created and spaced accordingly in a vertically manner. When the mouse 'clicked' \(using `SS_NOTIFY`\) on one of these static controls it sent a notification back to the parent window/dialog and thus it could be processed as a 'menu item' that had been clicked. 
+It worked by creating a rectangle shape when the mouse moved over the menu bar area, the rectangle menu panel was drawn just below this menu bar and then it iterated through a list of menu items which where in reality child static controls of text I created and spaced accordingly in a vertically manner. When the mouse 'clicked' \(using `SS_NOTIFY`\) on one of these static controls it sent a notification back to the parent window/dialog and thus it could be processed as a 'menu item' that had been clicked.
 
-Here is the prototype of the **HotMenu** control, with all the settings set to emulate the Steam client menu
+Here is the prototype of the **HotMenu** control, with all the settings set to emulate the Steam client menu:
 
 ![](/assets/HotMenu.gif)
 
