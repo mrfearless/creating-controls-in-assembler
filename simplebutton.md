@@ -2,11 +2,11 @@
 
 I'm going to use a simple button control example to help cover some of the code used in this article. The name of this control will be **SimpleButton**. I wont be covering every single function used, merely the most important or interesting ones. The code for the full project will be available for you to browse and read, including additional comments where relevant.
 
-Firstly I create two files: `SimpleButton.asm` that will contain the main code for the control and an include file called `SimpleButton.inc`. The `SimpleButton.inc` file be included from within `SimpleButton.asm` and will also be distributed along with the compiled static library of the control once we are finished `SimpleButton.lib`. 
+Firstly I create two files: `SimpleButton.asm` that will contain the main code for the control and an include file called `SimpleButton.inc`. The `SimpleButton.inc` file be included from within `SimpleButton.asm` and will also be distributed along with the compiled static library of the control once we are finished `SimpleButton.lib`.
 
 `SimpleButton.inc` will include function prototypes for users to call that will create and manipulate the **SimpleButton** control. Also included will be any structures or constants that will be required for the user to use in conjunction with the functions we create, and we will also include some custom messages for our control as well.
 
-Functions that will defined for use by the user of our control will be:
+Functions that will defined for use **externally** by the user of our control will be:
 
 ```asm
 SimpleButtonRegister            PROTO
@@ -32,7 +32,7 @@ _SB_PaintText                   PROTO :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :D
 _SB_PaintBorder                 PROTO :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD
 ```
 
-In addition, we will define a few other helper functions for use in this control. I combine the functions next into a library or framework for easy re-use, but I have recreated them here and included them in the `SimpleButton.asm` file just for ease of use and clarity in covering the features in the control. The helper functions are:
+In addition, we will define a few other internal helper functions for use in this control. In my own development I combine the functions next into a library or framework for easy re-use, but I have recreated them here and included them in the `SimpleButton.asm` file just for ease of use and clarity in covering the features in the control. The internal helper functions are:
 
 ```asm
 __AllocMemProperties            PROTO :DWORD, :DWORD, :DWORD    ; hControl, cbWndExtraOffset, dwSizeToAllocate
@@ -49,10 +49,6 @@ Our two custom message which are used in conjunction with [SendMessage](https://
 SB_GETPROPERTY                  EQU WM_USER + 1800              ; wParam = dwProperty, lParam = NULL
 SB_SETPROPERTY                  EQU WM_USER + 1799              ; wParam = dwProperty, lParam = dwValueToSet
 ```
-
-
-
-
 
 
 
