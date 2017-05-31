@@ -1,4 +1,4 @@
-# Initialize Our Control - \_SB\_Init
+# Initialize Our Control - \_SB\_Init {#sbinit}
 
 `_SB_Init` function is called from the `WM_CREATE` message of the `_SB_WndProc` main window messaging function. It initializes our **SimpleButton** with some default values: like colors for background and text and others like default font to use. In `_SB_Init` we also check the `dwStyle` flags passed to the **SimpleButton** control \(via direct call to [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx), call to `SimpleButtonCreate` or via dialog resource child control creation\) and we can override the `dwStyle` flags specified and/or force specific flags to be used or excluded \(in case the end-user forgot\), for example we can set our control to always use `WM_CHILD` plus `WM_VISIBLE` etc:
 
@@ -46,6 +46,4 @@ ENDM
 ```
 
 This means the user can use the **SimpleButton** control straight away, or they can choose to modify any of the external properties to customize it to their requirements after the control is created, whichever suits. See the Simple Button internal and external variables section later on for more details.
-
-
 
