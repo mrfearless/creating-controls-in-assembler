@@ -8,4 +8,5 @@
 * [Creating Our Control - SimpleButtonCreate](creating-our-control-simplebuttoncreate.md)
 * [Inside Our Control - \_SB\_WndProc](inside-our-control-sb-wndproc.md)
 * [Initialize Our Control - \_SB\_Init](initialize-our-control-sb-init.md)
+* [Painting Our Control - \_SB\_Paint](painting-our-control-sb-paint.md)
 
