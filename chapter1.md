@@ -1,3 +1,16 @@
-# First Chapter
+# Guidelines {#guidelines}
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+The design and coding process, I used to create controls, went through lots of evolutions. Different techniques and/or better code implementations were used once I discovered them or figured out via trial and error the best way to accomplish some tasks. I hope to show some of these techniques here. 
+
+
+
+Obviously this is my way of creating controls, and there are bound to be many ways to achieve the same results and alternate techniques to use that are all valid, like subclassing existing win32 controls for example, or utilizing custom draw or ownerdrawn features. So consider all this a guideline, code in your own style and take what you want from it and adapt any code and techniques in your own fashion to your own projects.
+
+
+
+I use RadASM as my editor of choice and I create templates for my own use that helps speed up development. Feel free to use whatever environment suits for you.
+
+
+
+Note: Error checking code is omitted for brevity. In some places I use the word 'variable' or 'variables', 'property' or 'properties'. The terms should be considered as interchangeable, meaning the same thing. Similarly function names, structures and parameters referring to or including the word 'property' or 'properties' means the same as 'variables' in that context as well.
+
