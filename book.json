@@ -79,6 +79,6 @@
           "content": "Use the win32 api and assembly language to create custom controls for windows."
         }
       ]
-    },
+    }
   }
 }
