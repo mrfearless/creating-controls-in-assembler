@@ -9,4 +9,5 @@
 * [Inside Our Control](inside-our-control.md)
 * [Initializing Our Control](initializing-our-control.md)
 * [Painting Our Control](painting-our-control.md)
+* [Using Our Control](using-our-control.md)
 
