@@ -1,4 +1,4 @@
-# Painting Our Control - \_SB\_Paint {#sbpaint}
+# Painting Our Control {#painting-our-control}
 
 In the `_SB_Paint` function we make the task of painting our **SimpleButton** control a bit easier for ourselves by separating the main tasks into other sub-functions: `_SB_PaintBackground`, `_SB_PaintText` and `_SB_PaintBorder`. We create a double buffer beforehand and BitBlt after the calls to the other `_SB_Paint` sub-functions.
 
@@ -41,7 +41,7 @@ _SB_PaintBackground PROC PRIVATE hControl:DWORD, hdc:DWORD, lpRect:DWORD, bEnabl
     LOCAL BackColor:DWORD
     LOCAL hBrush:DWORD
     LOCAL hOldBrush:DWORD
-    
+
     .IF bEnabledState == TRUE
         .IF bSelectedState == FALSE
             .IF bMouseOver == FALSE
@@ -63,14 +63,14 @@ _SB_PaintBackground PROC PRIVATE hControl:DWORD, hdc:DWORD, lpRect:DWORD, bEnabl
         Invoke __GetExtProperty, hControl, @SimpleButtonBackColor                ; Fallback to default Normal back color
     .ENDIF
     mov BackColor, eax
-    
+
     Invoke GetStockObject, DC_BRUSH
     mov hBrush, eax
     Invoke SelectObject, hdc, eax
     mov hOldBrush, eax
     Invoke SetDCBrushColor, hdc, BackColor
     Invoke FillRect, hdc, lpRect, hBrush
-    
+
     .IF hOldBrush != 0
         Invoke SelectObject, hdc, hOldBrush
         Invoke DeleteObject, hOldBrush
@@ -80,10 +80,9 @@ _SB_PaintBackground PROC PRIVATE hControl:DWORD, hdc:DWORD, lpRect:DWORD, bEnabl
     .ENDIF    
     ret
 _SB_PaintBackground ENDP
-
 ```
 
-So if `bEnabled` is `TRUE` and the **SimpleButton** control's selected state \(`bSelectedState`\) is `FALSE` we just have to determine if the mouse is over the control or not. 
+So if `bEnabled` is `TRUE` and the **SimpleButton** control's selected state \(`bSelectedState`\) is `FALSE` we just have to determine if the mouse is over the control or not.
 
 If the mouse is **not** over the control we fetch the default `@SimpleButtonBackColor` property which is a `DWORD` [COLORREF](https://msdn.microsoft.com/en-us/library/vs/alm/dd183449%28v=vs.85%29.aspx) value to paint the background with. If however the mouse _is_ over the control we fetch the `@SimpleButtonBackColorAlt` property which is another `DWORD` [COLORREF](https://msdn.microsoft.com/en-us/library/vs/alm/dd183449%28v=vs.85%29.aspx) value \(which may be the same value or a different value than the `@SimpleButtonBackColor` property\). Similarly we can fetch colors for when our control is disabled or if is selected state has been set with our `SimpleButtonSetState` function, or if the state of our control has changed automatically as a result of specifying the `SBBS_AUTOSTATE` flag when created the control \(which allows us to toggle the state of our **SimpleButton** control when it is clicked each time\)
 
