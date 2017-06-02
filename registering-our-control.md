@@ -14,6 +14,10 @@ Using RadASM's UserDefinedControl, in the image below, we can specify the text t
 
 ![](/assets/IDC_SB2.png)
 
+Later in our code we can retrieve the handle to the dialog's child control that is our **SimpleButton**, and use this handle to set other properties:
+
+![](/assets/GetDlgItemHandle.png)
+
 So we allow our end-user the ability to create our custom **SimpleButton** control, directly with the `SimpleButtonCreate` function, or via the [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) function or via a resource dialog control entry. The last two will require the `SimpleButtonRegister` function to have been called before the call to [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) or before the dialog is created.
 
 The `SimpleButtonRegister` function makes use of the [WNDCLASSEX](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633577%28v=vs.85%29.aspx\) structure to define the behaviour of our control. When you create a win32 api control via [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) using one of the predefined class names: static, edit, button, listbox etc, once it returns you have a handle to that control that can be used in other related api functions for that control. But where is the main code routine and how is it defined. Well the [WNDCLASSEX](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633577%28v=vs.85%29.aspx) structure is where this main function for the class is defined.
