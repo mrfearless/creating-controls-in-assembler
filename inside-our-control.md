@@ -1,6 +1,6 @@
 # Inside Our Control {#inside-our-control}
 
-`_SB_WndProc` is a standard main window messaging procedure, that handles specific `WM_` messages for our **SimpleButton** control. We have complete control over what messages are handled but we also have responsibility to handle specific messages, as we are implementing the core code and have to handle painting, mouse & keyboard interaction, and other features ourself.
+`_SB_WndProc` is a standard main window messaging procedure, that handles specific `WM_` messages for our **SimpleButton** control. We have complete control over what messages are handled but we also have responsibility to handle specific messages, as we are implementing the core code ourselves and have to handle painting, mouse & keyboard interaction, and other features.
 
 We wont cover all the messages implemented in the `_SB_WndProc`, see the code for the full project if you wish to see more detail. We will cover a few important messages that the control handles.
 
@@ -10,7 +10,7 @@ We use the `WM_CREATE` message of our **SimpleButton** control to initialize the
 
 `WM_NCCREATE` is one of the first messages a control receives and the `WM_NCDESTROY` message is one of the last. Its still possible to make use of the `WM_NCCREATE` message to handle some basic setup of controls, with the above mentioned caveat taken into account.
 
-Our `WM_CREATE` message of our `_SB_WndProc` for our **SimpleButton** control looks like this:
+Our `WM_CREATE` message of the `_SB_WndProc` function for our **SimpleButton** control looks like this:
 
 ```x86asm
     ...
@@ -23,13 +23,11 @@ Our `WM_CREATE` message of our `_SB_WndProc` for our **SimpleButton** control lo
     ...
 ```
 
-
-
 ### Property Structures
 
 Note that I use two structures for defining the variables  I will use in the control internally and externally \(named `_SIMPLEBUTTON_PROPERTIES` and `SIMPLEBUTTON_PROPERTIES`\), although they aren't used directly by most controls, instead I opt to use constant values that are offsets into the allocated memory.
 
-For example, the internal variables structure I use is defined as such:
+For example, the **internal** variables structure I use is defined as such:
 
 ```x86asm
 _SIMPLEBUTTON_PROPERTIES        STRUCT
@@ -51,8 +49,6 @@ with the variables \(or properties\) used, defined as:
 
 So the memory block that the four internal variables are stored in, start at offset 0 for the first one, offset 4 for the next and so on \(assuming all variables are dword values of course\). We will see later on getting and setting these internal and external variables using the helper functions: `__GetIntProperty`, `__SetIntProperty`, `__GetExtProperty` and `__SetExtProperty`.
 
-
-
 ### The Memory Used To Store Our Controls Properties
 
 Our `__AllocMemProperties` function will allocate the memory size required based on a structure we use \(can use other means, I just felt that it was more convenient to use a structure for better organisation of variables used\).
@@ -72,8 +68,6 @@ Internally the `__AllocaMemProperties` function calls either of the following:
 At the end of the `WM_CREATE` message we then call our own initialization routine `_SB_Init` to handle our own setup of our **SimpleButton** control.
 
 See the Simple Button internal and external variables section later on for more details.
-
-
 
 ### Handling Other Messages For Our Control
 
