@@ -10,7 +10,7 @@ The image below shows what a .rc dialog resource file might look like when creat
 
 ![](/assets/SimpleButtonResourceCreation.png)
 
-Using RadASM's UserDefinedControl, in the image below, we can specify the text to be used in the Caption property, the class to use, which in this example will be '_SimpleButton\_Control_' and we can also modify the xStyle property flags to include 0x6 which corresponds to `SBBS_HAND` plus `SBBS_PUSHBUTTON`. These flags are covered in more detail later on.
+Using RadASM's UserDefinedControl, in the image below, we can specify the text to be used in the `Caption` property, the class to use, which in this example will be '_SimpleButton\_Control_' and we can also modify the `xStyle` property flags to include `0x6` which corresponds to `SBBS_HAND` plus `SBBS_PUSHBUTTON`. These flags are covered in more detail later on.
 
 ![](/assets/IDC_SB2.png)
 
