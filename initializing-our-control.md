@@ -45,5 +45,11 @@ SBRGBCOLOR MACRO red:REQ, green:REQ, blue:REQ
 ENDM
 ```
 
+Here is our what our **SimpleButton** control will look like, in the image below, if it is created with the default property values we have assigned to it in our initialization function `_SB_Init`:
+
+![](/assets/SimpleButtonDemoDefaults.gif)
+
+Note that it doesnt make use of the blue text color and border shown in our earlier image in the [Our First Control section](//our-first-control.md).
+
 This means the user can use the **SimpleButton** control straight away, or they can choose to modify any of the external properties to customize it to their requirements after the control is created, whichever suits. See the Simple Button internal and external variables section later on for more details.
 
