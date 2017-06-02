@@ -1,0 +1,84 @@
+{
+  "title": "Custom Controls in Assembler",
+  "description": "Use the win32 api and assembly language to create custom controls for windows.",
+  "plugins": [
+    "anchors",
+    "disqus",
+    "github",
+    "meta",
+    "splitter",
+    "page-toc-button",
+    "anchor-navigation",
+    "image-captions",
+    "creativecommons",
+    "copy-code-button",
+    "word-count"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "custom-controls-in-assembler"
+    },
+    "github": {
+      "url": "https://github.com/mrfearless/creating-controls-in-assembler"
+    },
+    "image-captions": {
+        "caption": "Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
+    },
+    "meta": {
+      "data": [
+        {
+          "name": "keywords",
+          "content": "asm, assembly, assembler, controls, masm, win32, windows, fearless"
+        },
+        {
+          "property": "og:title",
+          "content": "Custom Controls in Assembler"
+        },
+        {
+          "property": "og:description",
+          "content": "Use the win32 api and assembly language to create custom controls for windows."
+        },
+        {
+          "property": "og:url",
+          "content": "https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/"
+        },
+        {
+          "property": "og:site_name",
+          "content": "Custom Controls in Assembler by fearless"
+        },
+        {
+          "property": "og:image",
+          "content": "https://github.com/mrfearless/creating-controls-in-assembler/blob/master/assets/mrfearless.jpg"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Custom Controls in Assembler"
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://github.com/mrfearless/creating-controls-in-assembler/blob/master/assets/mrfearless.jpg"
+        },
+        {
+          "name": "twitter:creator",
+          "content": "@fearless0"
+        },
+        {
+          "name": "twitter:site",
+          "content": "@fearless0"
+        },
+        {
+          "name": "twitter:url",
+          "content": "https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Use the win32 api and assembly language to create custom controls for windows."
+        }
+      ]
+    },
+  }
+}
