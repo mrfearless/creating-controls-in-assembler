@@ -9,7 +9,6 @@
     "splitter",
     "page-toc-button",
     "anchor-navigation",
-    "image-captions",
     "creativecommons",
     "copy-code-button",
     "word-count"
@@ -20,9 +19,6 @@
     },
     "github": {
       "url": "https://github.com/mrfearless/creating-controls-in-assembler"
-    },
-    "image-captions": {
-        "caption": "Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
     },
     "meta": {
       "data": [
