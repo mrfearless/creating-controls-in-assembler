@@ -27,7 +27,7 @@ In the .data section we create a string that will be unique for use with our con
 SimpleButtonClass DB "SimpleButton_Control",0
 ```
 
-And this is register function:
+And this is the control's register function:
 
 ```x86asm
 ;-------------------------------------------------------------------------------------
