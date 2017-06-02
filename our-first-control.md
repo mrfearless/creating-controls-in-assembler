@@ -4,7 +4,11 @@ I'm going to use a simple button control example to help cover some of the code 
 
 Here is what our **SimpleButton** control will look like when its in operation:
 
+
+
 ![](/assets/SimpleButtonDemo.gif)
+
+
 
 Very simple, but for our purposes should be fine to help cover the steps required to create the controls behaviour. We will allow the end-user to specify the background, text and border colors for seperate states such as: selected, enabled and mouse over. We will paint the background, the text and border based on those current states and handle mouse interaction, cursors and emulate a push button effect and/or a toggle state. All these options will be handled by using flags and properties that we define for use with our **SimpleButton** control.
 
