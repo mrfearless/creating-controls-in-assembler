@@ -10,11 +10,9 @@ The image below shows what a .rc dialog resource file might look like when creat
 
 ![](/assets/SimpleButtonResourceCreation.png)
 
-Using RadASM's UserDefinedControl, in the image below, we can specify the text to be used in the Caption property, the class to use, which in this example will be 'SimpleButton\_Control' and we can also modify the xStyle property flags to include 0x6 which corresponds to SBBS\_HAND plus SBBS\_PUSHBUTTON. These flags are covered in more detail later on.
+Using RadASM's UserDefinedControl, in the image below, we can specify the text to be used in the Caption property, the class to use, which in this example will be 'SimpleButton\_Control' and we can also modify the xStyle property flags to include 0x6 which corresponds to `SBBS_HAND` plus `SBBS_PUSHBUTTON`. These flags are covered in more detail later on.
 
 ![](/assets/IDC_SB2.png)
-
-
 
 So we allow our end-user the ability to create our custom **SimpleButton** control, directly with the `SimpleButtonCreate` function, or via the [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) function or via a resource dialog control entry. The last two will require the `SimpleButtonRegister` function to have been called before the call to [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) or before the dialog is created.
 
