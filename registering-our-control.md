@@ -10,7 +10,7 @@ The image below shows what a .rc dialog resource file might look like when creat
 
 ![](/assets/SimpleButtonResourceCreation.png)
 
-Using RadASM's UserDefinedControl, in the image below, we can specify the text to be used in the Caption property, the class to use, which in this example will be 'SimpleButton\_Control' and we can also modify the xStyle property flags to include 0x6 which corresponds to `SBBS_HAND` plus `SBBS_PUSHBUTTON`. These flags are covered in more detail later on.
+Using RadASM's UserDefinedControl, in the image below, we can specify the text to be used in the Caption property, the class to use, which in this example will be '_SimpleButton\_Control_' and we can also modify the xStyle property flags to include 0x6 which corresponds to `SBBS_HAND` plus `SBBS_PUSHBUTTON`. These flags are covered in more detail later on.
 
 ![](/assets/IDC_SB2.png)
 
@@ -64,7 +64,7 @@ SimpleButtonRegister PROC PUBLIC
 SimpleButtonRegister ENDP
 ```
 
-When registering a class with [RegisterClassEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633587%28v=vs.85%29.aspx), the `lpszClassName` field of the [WNDCLASSEX](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633577%28v=vs.85%29.aspx) will hold our custom classname \(in this case 'SimpleButton\_Control'\) and the `lpfnWndProc` field will hold the address of our custom controls main window procedure \(`_SB_WndProc`\), which is very much like a standard windows procedure, that handles specific `WM_` messages.
+When registering a class with [RegisterClassEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633587%28v=vs.85%29.aspx), the `lpszClassName` field of the [WNDCLASSEX](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633577%28v=vs.85%29.aspx) will hold our custom classname \(in this case '_SimpleButton\_Control_'\) and the `lpfnWndProc` field will hold the address of our custom controls main window procedure \(`_SB_WndProc`\), which is very much like a standard windows procedure, that handles specific `WM_` messages.
 
 The `cbWndExtra` of [WNDCLASSEX](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633577%28v=vs.85%29.aspx) is used to store some extra bytes for use with our control. See the Simple Button internal and external variables section later on for more details.
 
