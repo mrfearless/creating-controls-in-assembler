@@ -1,4 +1,4 @@
-# Registering Our Control - SimpleButtonRegister {#simplebuttonregister}
+# Registering Our Control {#registering-our-control}
 
 The `SimpleButtonCreate` function will call our `SimpleButtonRegister` function to register the class associated with our control. So why do we need the `SimpleButtonRegister` function?, surely we can just handle all this in the `SimpleButtonCreate` function?
 
