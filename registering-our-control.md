@@ -6,15 +6,19 @@ Well, there are number of reasons we want to have a `SimpleButtonRegister` funct
 
 RadASM allows a custom control to be placed on a dialog and all it requires is a classname. When you look at the dialog resource file it shows the control and the classname. At runtime when the dialog is instantiated, it will automatically enumerate and create all controls in the dialog, and if our custom **SimpleButton** control is registered it will allow the dialog to create the control for our usage. This technique will apply to other IDEs that allow you to specify the control classname \(or if you need, you can edit the Dialog's .rc resource file directly to include this information\)
 
-The image below shows what a .rc dialog resource file might look like when creating our custom control in this manner:![](/assets/SimpleButtonResourceCreation2.png)
+The image below shows what a .rc dialog resource file might look like when creating our custom control in this manner:
+
+![](/assets/SimpleButtonResourceCreation2.png)
 
 Using RadASM's UserDefinedControl, shown in the image below, we can specify the text to be used in the `Caption` property, the class to use, which in this example will be '_SimpleButton\_Control_' and we can also modify the `xStyle` property flags to include `0x6` which corresponds to `SBBS_HAND` plus `SBBS_PUSHBUTTON`. These flags are covered in more detail later on.
 
+
+
 ![](/assets/IDC_SB2.png)
 
+Later in our code we can retrieve the handle to the dialog's child control that is our **SimpleButton**, and use this handle to set other properties of our control, like in the example image below:
 
-
-Later in our code we can retrieve the handle to the dialog's child control that is our **SimpleButton**, and use this handle to set other properties of our control, like in the example image below:![](/assets/GetDlgItemHandle.png)
+![](/assets/GetDlgItemHandle.png)
 
 So we allow our end-user the ability to create our custom **SimpleButton** control, directly with the `SimpleButtonCreate` function, or via the [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) function or via a resource dialog control entry. The last two will require the `SimpleButtonRegister` function to have been called before the call to [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) or before the dialog is created.
 
