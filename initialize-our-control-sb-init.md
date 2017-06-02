@@ -2,7 +2,7 @@
 
 `_SB_Init` function is called from the `WM_CREATE` message of the `_SB_WndProc` main window messaging function. It initializes our **SimpleButton** with some default values: like colors for background and text and others like default font to use. In `_SB_Init` we also check the `dwStyle` flags passed to the **SimpleButton** control \(via direct call to [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx), call to `SimpleButtonCreate` or via dialog resource child control creation\) and we can override the `dwStyle` flags specified and/or force specific flags to be used or excluded \(in case the end-user forgot\), for example we can set our control to always use `WM_CHILD` plus `WM_VISIBLE` etc:
 
-```
+```x86asm
     ...
     ; get style and check it is our default at least
     Invoke GetWindowLong, hControl, GWL_STYLE
@@ -19,7 +19,7 @@
 
 We also set some default values for our control's external properties, like standard colors that might be used for text and background when creating our control. So some of the default values we will set for our control's properties are:
 
-```
+```x86asm
     ...
     Invoke __SetExtProperty, hControl, @SimpleButtonTextColor, SBRGBCOLOR(51,51,51)
     Invoke __SetExtProperty, hControl, @SimpleButtonBackColor, SBRGBCOLOR(255,255,255)
@@ -30,7 +30,7 @@ We also set some default values for our control's external properties, like stan
 
 Only some of the external properties are shown for brevity, the ones that are shown are define in `SimpleButton.inc` as:
 
-```
+```x86asm
 @SimpleButtonTextColor          EQU 4
 @SimpleButtonBackColor          EQU 24
 @SimpleButtonBorderColor        EQU 44
@@ -39,7 +39,7 @@ Only some of the external properties are shown for brevity, the ones that are sh
 
 For color properties \([COLORREF](https://msdn.microsoft.com/en-us/library/vs/alm/dd183449%28v=vs.85%29.aspx)\) we make use of a macro that is included in `SimpleButton.inc`:
 
-```
+```x86asm
 SBRGBCOLOR MACRO red:REQ, green:REQ, blue:REQ
     EXITM < red or green shl 8 or blue shl 16 >
 ENDM

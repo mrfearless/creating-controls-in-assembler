@@ -6,7 +6,7 @@ In the `_SB_Paint` function we make the task of painting our **SimpleButton** co
 
 The sub functions typically are passed some internal variables as parameters, for example:
 
-```
+```x86asm
     ...
     LOCAL EnabledState:DWORD
     LOCAL MouseOver:DWORD
@@ -29,11 +29,11 @@ The sub functions typically are passed some internal variables as parameters, fo
 
 With all these attributes the end-user will have control our how the **SimpleButton** will look depending on the default properties set and any additional ones the end-user sets themselves.
 
-Each of the subfunctions will read a particular external property depending on the status of the internal properties, so in our `_SB_PaintBackground` function, depending on wether the mouse is over the control or not it will fetch a different external property.
+Each of the sub-functions will read a particular external property depending on the status of the internal properties, so in our `_SB_PaintBackground` function, depending on whether the mouse is over the control or not it will fetch a different external property.
 
 Here is the complete `_SB_PaintBackground` function to illustrate this:
 
-```
+```x86asm
 ;-------------------------------------------------------------------------------------
 ; _SB_PaintBackground - Paints the background of the SimpleButton control
 ;-------------------------------------------------------------------------------------
@@ -89,5 +89,5 @@ If the mouse is **not** over the control we fetch the default `@SimpleButtonBack
 
 Then we proceed to paint the background of our **SimpleButton** control with the color retrieved, using the standard [FillRect](https://msdn.microsoft.com/en-us/library/windows/desktop/dd162719%28v=vs.85%29.aspx) api call.
 
-We then clean up the brushes used, and return to `_SB_Paint` ready to call the next subfunction to handle painting our text and border. Each of those subfunctions works in a similar manner, by fetching the appropriate external property value and then painting based on those values for text or border colors, depending on the status of the control: selected, enabled or if the mouse is over the control.
+We then clean up the brushes used, and return to `_SB_Paint` ready to call the next sub-function to handle painting our text and border. Each of those sub-functions works in a similar manner, by fetching the appropriate external property value and then painting based on those values for text or border colors, depending on the status of the control: selected, enabled or if the mouse is over the control.
 

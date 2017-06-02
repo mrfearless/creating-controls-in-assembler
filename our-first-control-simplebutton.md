@@ -8,7 +8,7 @@ Firstly I create two files: `SimpleButton.asm` that will contain the main code f
 
 Functions that will defined for use **externally** by the user of our control will be:
 
-```asm
+```x86asm
 SimpleButtonRegister            PROTO
 SimpleButtonCreate              PROTO :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD
                                 ; hWndParent, lpszText, xpos, ypos, dwWidth, dwHeight, dwResourceID, dwStyle
@@ -22,7 +22,7 @@ The `SimpleButton.asm` will contain these functions and other functions designed
 
 Functions that will defined for use **internally** by the control will be:
 
-```asm
+```x86asm
 _SB_WndProc                     PROTO :DWORD, :DWORD, :DWORD, :DWORD
 _SB_Init                        PROTO :DWORD
 _SB_Cleanup                     PROTO :DWORD
@@ -34,7 +34,7 @@ _SB_PaintBorder                 PROTO :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :D
 
 In addition, we will define a few other internal helper functions for use in this control. In my own development I combine the functions next into a library or framework for easy re-use, but I have recreated them here and included them in the `SimpleButton.asm` file just for ease of use and clarity in covering the features in the control. The internal helper functions are:
 
-```asm
+```x86asm
 __AllocMemProperties            PROTO :DWORD, :DWORD, :DWORD    ; hControl, cbWndExtraOffset, dwSizeToAllocate
 __FreeMemProperties             PROTO :DWORD, :DWORD            ; hControl, cbWndExtraOffset
 __GetIntProperty                PROTO :DWORD, :DWORD            ; hControl, dwProperty
@@ -45,7 +45,7 @@ __SetExtProperty                PROTO :DWORD, :DWORD, :DWORD    ; hControl, dwPr
 
 Our two custom message which are used in conjunction with [SendMessage](https://msdn.microsoft.com/en-us/library/windows/desktop/ms644950%28v=vs.85%29.aspx) api call, can be used instead of the `SimpleButtonSetProperty` / `SimpleButtonGetProperty` functions, are defined as:
 
-```asm
+```x86asm
 SB_GETPROPERTY                  EQU WM_USER + 1800              ; wParam = dwProperty, lParam = NULL
 SB_SETPROPERTY                  EQU WM_USER + 1799              ; wParam = dwProperty, lParam = dwValueToSet
 ```

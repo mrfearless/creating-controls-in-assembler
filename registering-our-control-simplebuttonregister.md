@@ -14,14 +14,14 @@ Here is our `SimpleButtonRegister` function, that registers out new **SimpleButt
 
 In the .data section we create a string that will be unique for use with our control:
 
-```nasm
+```x86asm
 .DATA
 SimpleButtonClass DB "SimpleButton_Control",0
 ```
 
 And this is register function:
 
-```nasm
+```x86asm
 ;-------------------------------------------------------------------------------------
 ; SimpleButtonRegister - Registers the SimpleButton control
 ; Can be used at start of program for use with RadASM custom control

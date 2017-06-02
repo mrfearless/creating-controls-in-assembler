@@ -14,7 +14,7 @@ The most useful information I came across that explains the `dwStyle` flags para
 
 That means we have `0x0` - `0xFFFF` reserved for defining styles for our controls. And we can incorporate the standard style flags as well if we so desire \(`WS_BORDER`, `WS_VISIBLE` etc\). So our **SimpleButton** styles we will use are:
 
-```nasm
+```x86asm
 ; SimpleButton Button Styles:
 SBBS_CENTER                     EQU 0h  ; Align text centrally
 SBBS_LEFT                       EQU 1h  ; Align text to the left of the button
@@ -37,7 +37,7 @@ Of course you are free to define how you want your control to behave at creation
 
 Here is our `SimpleButtonCreate` function:
 
-```nasm
+```x86asm
 ;-------------------------------------------------------------------------------------
 ; SimpleButtonCreate - Returns handle in eax of newly created control or NULL otherwise
 ;-------------------------------------------------------------------------------------
