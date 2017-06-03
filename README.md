@@ -1,5 +1,7 @@
 # Creating Controls In Assembler
 
+![](/cover_small.jpg)
+
 A book, by [mrfearless](https://github.com/mrfearless), published on [Gitbook.com](/Gitbook.com), about creating controls in assembly language.
 
 The book introduces the reader to my journey and techniques I discovered and evolved over time, for creating custom controls using the windows win32 API and Microsoft's Macro Assembler \(Masm\).
