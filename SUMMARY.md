@@ -1,6 +1,6 @@
 # Summary
 
-* Preface
+* [Preface](/preface.md)
 * Author
 * [Introduction](README.md)
 * [Guidelines](guidelines.md)
