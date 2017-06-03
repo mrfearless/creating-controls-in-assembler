@@ -7,24 +7,24 @@ In the `_SB_Paint` function we make the task of painting our **SimpleButton** co
 The sub functions typically are passed some internal variables as parameters, for example:
 
 ```x86asm
-    ...
-    LOCAL EnabledState:DWORD
-    LOCAL MouseOver:DWORD
-    LOCAL SelectedState:DWORD
-    ...
+...
+LOCAL EnabledState:DWORD
+LOCAL MouseOver:DWORD
+LOCAL SelectedState:DWORD
+...
 
-    ...
-    Invoke __GetIntProperty, hControl, @SimpleButtonEnabledState
-    mov EnabledState, eax
-    Invoke __GetIntProperty, hControl, @SimpleButtonMouseOver
-    mov MouseOver, eax
-    Invoke __GetIntProperty, hControl, @SimpleButtonSelectedState
-    mov SelectedState, eax  
+...
+Invoke __GetIntProperty, hControl, @SimpleButtonEnabledState
+mov EnabledState, eax
+Invoke __GetIntProperty, hControl, @SimpleButtonMouseOver
+mov MouseOver, eax
+Invoke __GetIntProperty, hControl, @SimpleButtonSelectedState
+mov SelectedState, eax  
 
-    Invoke _SB_PaintBackground, hControl, hdcMem, Addr rect, EnabledState, MouseOver, SelectedState
-    Invoke _SB_PaintText, hControl, hdcMem, Addr rect, EnabledState, MouseOver, SelectedState
-    Invoke _SB_PaintBorder, hControl, hdcMem, Addr rect, EnabledState, MouseOver, SelectedState
-    ...
+Invoke _SB_PaintBackground, hControl, hdcMem, Addr rect, EnabledState, MouseOver, SelectedState
+Invoke _SB_PaintText, hControl, hdcMem, Addr rect, EnabledState, MouseOver, SelectedState
+Invoke _SB_PaintBorder, hControl, hdcMem, Addr rect, EnabledState, MouseOver, SelectedState
+...
 ```
 
 With all these attributes the end-user will have control our how the **SimpleButton** will look depending on the default properties set and any additional ones the end-user sets themselves.
@@ -45,25 +45,24 @@ _SB_PaintBackground PROC PRIVATE hControl:DWORD, hdc:DWORD, lpRect:DWORD, bEnabl
     .IF bEnabledState == TRUE
         .IF bSelectedState == FALSE
             .IF bMouseOver == FALSE
-                Invoke __GetExtProperty, hControl, @SimpleButtonBackColor        ; Normal back color
+                Invoke __GetExtProperty, hControl, @SimpleButtonBackColor
             .ELSE
-                Invoke __GetExtProperty, hControl, @SimpleButtonBackColorAlt     ; Mouse over back color
+                Invoke __GetExtProperty, hControl, @SimpleButtonBackColorAlt
             .ENDIF
         .ELSE
             .IF bMouseOver == FALSE
-                Invoke __GetExtProperty, hControl, @SimpleButtonBackColorSel     ; Selected back color
+                Invoke __GetExtProperty, hControl, @SimpleButtonBackColorSel
             .ELSE
-                Invoke __GetExtProperty, hControl, @SimpleButtonBackColorSelAlt  ; Selected mouse over color 
+                Invoke __GetExtProperty, hControl, @SimpleButtonBackColorSelAlt 
             .ENDIF
         .ENDIF
     .ELSE
-        Invoke __GetExtProperty, hControl, @SimpleButtonBackColorDisabled        ; Disabled back color
+        Invoke __GetExtProperty, hControl, @SimpleButtonBackColorDisabled
     .ENDIF
     .IF eax == 0 ; try to get default back color if others are set to 0
-        Invoke __GetExtProperty, hControl, @SimpleButtonBackColor                ; Fallback to default Normal back color
+        Invoke __GetExtProperty, hControl, @SimpleButtonBackColor
     .ENDIF
     mov BackColor, eax
-
     Invoke GetStockObject, DC_BRUSH
     mov hBrush, eax
     Invoke SelectObject, hdc, eax
