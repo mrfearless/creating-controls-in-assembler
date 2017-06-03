@@ -6,9 +6,12 @@ The book introduces the reader to my journey and techniques I discovered and evo
 
 It covers the main areas of developing an example control, SimpleButton, which the reader can then use as basis for creating their own custom controls.
 
-The source code for the book can be found on [Github](https://github.com/mrfearless/creating-controls-in-assembler)
+* The source code for the book can be found on [Github](https://github.com/mrfearless/creating-controls-in-assembler)
+* The canonical URL for the book is [https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/](https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/)
 
-The canonical URL for the book is [https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/](https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/)
+[Read for free online](https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/) \(recommended\) or download the [PDF](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) or [ePUB](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) or [Mobi/Kindle](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler) editions.
+
+
 
 .
 
