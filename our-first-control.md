@@ -12,7 +12,7 @@ Firstly I create two files: `SimpleButton.asm` that will contain the main code f
 
 `SimpleButton.inc` will include function prototypes for users to call that will create and manipulate the **SimpleButton** control. Also included will be any structures or constants that will be required for the user to use in conjunction with the functions we create, and we will also include some custom messages for our control as well.
 
-### External End-User Functions
+##### External End-User Functions
 
 Functions that will defined for use **externally** by the end-user of our control will be:
 
@@ -28,7 +28,7 @@ SimpleButtonSetState            PROTO :DWORD, :DWORD            ; dwProperty, dw
 
 The `SimpleButton.asm` will contain these functions _and_ other functions designed to be used internally by the control itself. I prefix the functions that will be used **internally** with an **underscore** and an **abbreviation**, but you can use whatever naming convention you desire.
 
-### Internal Developer Functions
+##### Internal Developer Functions
 
 Functions that will defined for use **internally** by the control will be:
 
@@ -53,7 +53,7 @@ __GetExtProperty                PROTO :DWORD, :DWORD            ; hControl, dwPr
 __SetExtProperty                PROTO :DWORD, :DWORD, :DWORD    ; hControl, dwProperty, dwPropertyValue
 ```
 
-### Custom Messages For The End-User
+##### Custom Messages For The End-User
 
 Our two custom message which are used in conjunction with [SendMessage](https://msdn.microsoft.com/en-us/library/windows/desktop/ms644950%28v=vs.85%29.aspx) api call, can be used instead of the `SimpleButtonSetProperty` / `SimpleButtonGetProperty` functions, are defined as:
 
