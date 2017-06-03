@@ -1,4 +1,4 @@
-# Creating Our Control {#creating-our-control}
+# Creating Our Control
 
 The `SimpleButtonCreate` function will allow the user to create the **SimpleButton** control directly with this function. The parameters for `SimpleButtonCreate` are `hWndParent`, `lpszText`, `xpos`, `ypos`, `controlwidth`, `controlheight`, `dwResourceID`, and finally `dwStyle`. This is more or less typical for creating a control with [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) and as such we try to keep our function as similar to that as we can, so that it is easier for the end user to use.
 
