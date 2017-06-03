@@ -1,4 +1,4 @@
-# Painting Our Control {#painting-our-control}
+# Painting Our Control
 
 In the `_SB_Paint` function we make the task of painting our **SimpleButton** control a bit easier for ourselves by separating the main tasks into other sub-functions: `_SB_PaintBackground`, `_SB_PaintText` and `_SB_PaintBorder`. We create a double buffer beforehand and BitBlt after the calls to the other `_SB_Paint` sub-functions.
 
