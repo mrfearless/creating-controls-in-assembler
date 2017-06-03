@@ -67,7 +67,7 @@ Internally the `__AllocaMemProperties` function calls either of the following:
 
 At the end of the `WM_CREATE` message we then call our own initialization routine `_SB_Init` to handle our own setup of our **SimpleButton** control.
 
-See the Simple Button internal and external variables section later on for more details.
+See the [Control Properties](/control-properties.md) section later on for more details.
 
 ##### Handling Other Messages For Our Control
 
