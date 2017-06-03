@@ -10,8 +10,8 @@ It covers the main areas of developing an example control, SimpleButton, which t
 
 * The Github repository for this book can be found here: [https://github.com/mrfearless/creating-controls-in-assembler](https://github.com/mrfearless/creating-controls-in-assembler)
 * This Gitbook can be found online here: [https://mrfearless.gitbooks.io/creating-controls-in-assembler](https://mrfearless.gitbooks.io/creating-controls-in-assembler)
-
-[![Read for free online](https://img.shields.io/badge/gitbook-online-brightgreen.svg)](https://mrfearless.gitbooks.io/creating-controls-in-assembler) \(recommended\) or download the [![PDF](https://img.shields.io/badge/gitbook-pdf-green.svg)](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) or [![ePUB](https://img.shields.io/badge/gitbook-epub-yellowgreen.svg)](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) or [![Mobi/Kindle](https://img.shields.io/badge/gitbook-mobi-yellow.svg)](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler) editions.
+* Read or download:
+[![Online](https://img.shields.io/badge/gitbook-online-brightgreen.svg)](https://mrfearless.gitbooks.io/creating-controls-in-assembler) [![PDF](https://img.shields.io/badge/gitbook-pdf-green.svg)](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) [![ePUB](https://img.shields.io/badge/gitbook-epub-yellowgreen.svg)](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) [![Mobi/Kindle](https://img.shields.io/badge/gitbook-mobi-yellow.svg)](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler)
 
 Contact me:
 * [![Website:](https://img.shields.io/badge/website-LetTheLightIn-000000.svg)](http://www.LetTheLight.in)
