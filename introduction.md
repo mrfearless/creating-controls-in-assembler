@@ -1,6 +1,6 @@
 # Introduction {#introduction}
 
-Creating controls in assembler.
+### Creating Controls In Assembler
 
 There are a number of tutorials out on the internet that describe how to create a custom control, but not many that cover creating a control in assembler. Mostly these tutorials are written for C/C++ users, which acts as a basic starting point for assembly developers to port over the code to assembly language.
 
@@ -16,7 +16,7 @@ That led me to wonder about user interface controls in general, the ones found i
 
 The following information describes the path I took in creating custom controls in assembler using the Win32 API and masm assembler. Hopefully you will find it both useful and informative.
 
-### Windows Controls, Design & The Future
+### Windows Controls And Modern UI Design
 
 The windows controls - the basic and custom controls - are available for users to create in assembler via calls to the win32 api. The image below shows examples of some of the most commonly used ones \(a complete listing of controls can be found on the [msdn microsoft website](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773169%28v=vs.85%29.aspx)\):
 
