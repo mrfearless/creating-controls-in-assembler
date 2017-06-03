@@ -16,7 +16,7 @@ I recall a time in the past, when my then current boss - who was coding in x86 a
 
 I silently vowed I would understand this language, taking it as a personal challenge, and I took every opportunity I could to read all the books and articles on assembly language i could find or buy.
 
-That was over 15 years ago. I never told him of my self-taught accomplishment and as far as I know he never learnt that I did infact suceed in learning assembler - including more advanced topics than my boss would have expected.
+That was over 15 years ago. I never told my old boss of my self-taught accomplishment, and as far as I know he never learnt that I did infact suceed in learning assembler - including more advanced topics than my boss would have expected.
 
 Learning is a great and rewarding experience. And sharing that knowledge is a way of repaying that.
 
