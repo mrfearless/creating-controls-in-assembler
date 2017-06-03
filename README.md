@@ -14,7 +14,7 @@ It covers the main areas of developing an example control, SimpleButton, which t
 [Read for free online](https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/) \(recommended\) or download the [![PDF](https://img.shields.io/badge/gitbook-pdf-green.svg)](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) or [![ePUB](https://img.shields.io/badge/gitbook-epub-yellowgreen.svg)](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) or [![Mobi/Kindle](https://img.shields.io/badge/gitbook-mobi-yellow.svg)](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler) editions.
 
 Contact me:
-* [![Website:](https://img.shields.io/badge/website-www.LetTheLight.In-000000.svg)](http://www.LetTheLight.in)
+* [![Website:](https://img.shields.io/badge/website-LetTheLightIn-000000.svg)](http://www.LetTheLight.in)
 * [![Twitter:](https://img.shields.io/badge/twitter-fearless0-26A9E9.svg)](https://twitter.com/fearless0)
 * [![Github:](https://img.shields.io/badge/github-mrfearless-7A8E97.svg)](https://github.com/mrfearless)
 
