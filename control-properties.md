@@ -86,5 +86,9 @@ Contents of RadASM\Masm\masmApiConst.api:
 @SimpleButtonBorderColorDisabled,@SimpleButtonBorderStyle
 ```
 
+This is what RadASM's auto-complete looks like when implemented:
+
+![](/assets/SimpleButtonGetPropertyAutoComplete.gif)
+
 The project source also includes the `masmApiCall.api.txt`, `masmApiConst.api.txt`and `masmMessage.api.txt` text files that incorporate these calls and constants for use with RadASM's autocomplete feature, you just need to open the appropriate .api file and paste the contents at the end of the file and restart RadASM for them to be available to you. Instructions are included in the text files themselves as to which file it related to and the typical location of those .api files.
 
