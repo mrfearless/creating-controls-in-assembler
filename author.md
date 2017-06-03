@@ -4,13 +4,13 @@
 
 I am Keith Robertson, also known as fearless / mrfearless. I was born in Scotland but now live in Ireland.
 
-I have a Teacher Trainer Diploma in Information Technology Skills and have worked as a professional programmer for over 5 years. I have used a number of programming languages in production environments and custom built applications for clients using: dBASE, Clipper, Foxpro, Visual Foxpro and Visual Basic. 
+I have a Teacher Trainer Diploma in Information Technology Skills and have worked as a professional programmer for over 5 years. I have used a number of programming languages in production environments and custom built applications for clients using: dBASE, Clipper, Foxpro, Visual Foxpro and Visual Basic.
 
-I remember being interesting in coding from a young age, starting with the basic language on the ZX Spectrum 48K. 
+I remember being interesting in coding from a young age, starting with the basic language on the ZX Spectrum 48K.
 
-Over the years I have managed to develop and enhance my skills with other technologies and programming languages that interested me. 
+Over the years I have managed to develop and enhance my skills with other technologies and programming languages that interested me - including assembly language.
 
-I recall a time in the past, when my then current boss - who was coding in x86 assembler - said to me: 
+I recall a time in the past, when my then current boss - who was coding in x86 assembler - said to me:
 
 > Its not for you. You wouldnt be able to understand the low level nature of assembler, its too advanced for you, you should stick to basic and clipper instead.
 
@@ -21,8 +21,6 @@ That was over 15 years ago. I never told him of my self-taught accomplishment an
 Learning is a great and rewarding experience. And sharing that knowledge is a way of repaying that.
 
 Never let anyone tell you that you can't do something.
-
-
 
 fearless
 
