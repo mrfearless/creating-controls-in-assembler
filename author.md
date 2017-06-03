@@ -14,7 +14,7 @@ I recall a time in the past, when my then current boss - who was coding in x86 a
 
 > Its not for you. You wouldnt be able to understand the low level nature of assembler, its too advanced for you, you should stick to basic and clipper instead.
 
-I silenty vowed I would understand this language, taken it as a challenge, and I took every opportunity I could to read all the books and articles on assembly language i could find.
+I silently vowed I would understand this language, taking it as a personal challenge, and I took every opportunity I could to read all the books and articles on assembly language i could find or buy.
 
 That was over 15 years ago. I never told him of my self-taught accomplishment and as far as I know he never learnt that I did infact suceed in learning assembler - including more advanced topics than my boss would have expected.
 
