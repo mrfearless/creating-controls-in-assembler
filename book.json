@@ -20,6 +20,15 @@
     "github": {
       "url": "https://github.com/mrfearless/creating-controls-in-assembler"
     },
+    "pdf": {
+        "fontSize": 11,
+        "margin": {
+            "right": 32,
+            "left": 32,
+            "top": 32,
+            "bottom": 32
+        }
+    },    
     "meta": {
       "data": [
         {
