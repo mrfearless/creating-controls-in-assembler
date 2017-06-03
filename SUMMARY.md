@@ -1,7 +1,7 @@
 # Summary
 
 * [Preface](/preface.md)
-* Author
+* [Author](author.md)
 * [Introduction](README.md)
 * [Guidelines](guidelines.md)
 * [The HotMenu Quest](the-hotmenu-quest.md)
@@ -12,6 +12,4 @@
 * [Initializing Our Control](initializing-our-control.md)
 * [Painting Our Control](painting-our-control.md)
 * [Using Our Control](using-our-control.md)
-
-
 
