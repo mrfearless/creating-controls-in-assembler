@@ -1,4 +1,4 @@
-# The HotMenu Quest {#the-hotmenu-quest}
+# The HotMenu Quest
 
 So after my epiphany about controls being painted blobs and using smoke and mirrors to display how it worked, I began my quest to discover more, and how to create a control for myself.
 
