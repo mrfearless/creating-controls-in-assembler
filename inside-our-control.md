@@ -4,7 +4,7 @@
 
 We wont cover all the messages implemented in the `_SB_WndProc`, see the code for the full project if you wish to see more detail. We will cover a few important messages that the control handles.
 
-### Handling The First Message: WM\_CREATE vs WM\_NCCREATE
+##### Handling The First Message: WM\_CREATE vs WM\_NCCREATE
 
 We use the `WM_CREATE` message of our **SimpleButton** control to initialize the memory that will store blocks of memory for our internal and external variables that will be used by us and by any end-user, and we then call our own initialization routine. I opted to use `WM_CREATE` instead of `WM_NCCREATE` because I found over the years that sometimes the `cbWndExtra` extra data wasn't being allocated sometimes, and any initialization routine that set some defaults values in these extra memory areas could cause an invalid memory address error. I found moving all this code to the `WM_CREATE` was more reliable.
 
@@ -23,7 +23,7 @@ Our `WM_CREATE` message of the `_SB_WndProc` function for our **SimpleButton** c
 ...
 ```
 
-### Property Structures
+##### Property Structures
 
 Note that I use two structures for defining the variables  I will use in the control internally and externally \(named `_SIMPLEBUTTON_PROPERTIES` and `SIMPLEBUTTON_PROPERTIES`\), although they aren't used directly by most controls, instead I opt to use constant values that are offsets into the allocated memory.
 
@@ -49,7 +49,7 @@ with the variables \(or properties\) used, defined as:
 
 So the memory block that the four internal variables are stored in, start at offset 0 for the first one, offset 4 for the next and so on \(assuming all variables are dword values of course\). We will see later on getting and setting these internal and external variables using the helper functions: `__GetIntProperty`, `__SetIntProperty`, `__GetExtProperty` and `__SetExtProperty`.
 
-### The Memory Used To Store Our Controls Properties
+##### The Memory Used To Store Our Controls Properties
 
 Our `__AllocMemProperties` function will allocate the memory size required based on a structure we use \(can use other means, I just felt that it was more convenient to use a structure for better organisation of variables used\).
 
@@ -69,7 +69,7 @@ At the end of the `WM_CREATE` message we then call our own initialization routin
 
 See the Simple Button internal and external variables section later on for more details.
 
-### Handling Other Messages For Our Control
+##### Handling Other Messages For Our Control
 
 Along with handling the `WM_CREATE` message as described above, we have to handle a few more, for when the control is destroyed, when it is painted and other features such as mouse and keyboard interaction \(if applicable to our control\).
 
