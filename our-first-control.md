@@ -1,6 +1,8 @@
 # Our First Control
 
-I'm going to use a simple button control example to help cover some of the code used in this article. The name of this control will be **SimpleButton**. I wont be covering every single function used, merely the most important or interesting ones. The code for the full project will be available for you to browse and read, including additional comments where relevant.
+I'm going to use a simple button control example to help cover some of the code used in this article. The name of this control will be **SimpleButton**. I wont be covering every single function used, merely the most important or interesting ones. The code for the full project including examples is available for you to browse, read and download here: 
+
+[https://github.com/mrfearless/SimpleButton](https://github.com/mrfearless/SimpleButton)
 
 Here is what our **SimpleButton** control will look like when its in operation:
 
