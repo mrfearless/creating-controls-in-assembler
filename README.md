@@ -12,7 +12,6 @@ It covers the main areas of developing an example control, SimpleButton, which t
 [Read for free online](https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/) \(recommended\) or download the [PDF](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) or [ePUB](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) or [Mobi/Kindle](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler) editions.
 
 {% creativecommons type="by-sa" %}
-
 {% endcreativecommons %}
 
 .
