@@ -12,8 +12,5 @@
 * [Initializing Our Control](/initializing-our-control.md)
 * [Painting Our Control](/painting-our-control.md)
 * [Using Our Control](/using-our-control.md)
-
-
-
-
+* [Control Properties](control-properties.md)
 
