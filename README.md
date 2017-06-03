@@ -9,11 +9,13 @@ The book introduces the reader to my journey and techniques I discovered and evo
 It covers the main areas of developing an example control, SimpleButton, which the reader can then use as basis for creating their own custom controls.
 
 * The Github repository for this book can be found here: [https://github.com/mrfearless/creating-controls-in-assembler](https://github.com/mrfearless/creating-controls-in-assembler)
+* The Github repository for the SimpleButton example control is here: [https://github.com/mrfearless/SimpleButton](https://github.com/mrfearless/SimpleButton)
 * This Gitbook can be found online here: [https://mrfearless.gitbooks.io/creating-controls-in-assembler](https://mrfearless.gitbooks.io/creating-controls-in-assembler)
 * Read or download:
-[![Online](https://img.shields.io/badge/gitbook-online-brightgreen.svg)](https://mrfearless.gitbooks.io/creating-controls-in-assembler) [![PDF](https://img.shields.io/badge/gitbook-pdf-green.svg)](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) [![ePUB](https://img.shields.io/badge/gitbook-epub-yellowgreen.svg)](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) [![Mobi/Kindle](https://img.shields.io/badge/gitbook-mobi-yellow.svg)](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler)
+  [![Online](https://img.shields.io/badge/gitbook-online-brightgreen.svg)](https://mrfearless.gitbooks.io/creating-controls-in-assembler) [![PDF](https://img.shields.io/badge/gitbook-pdf-green.svg)](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) [![ePUB](https://img.shields.io/badge/gitbook-epub-yellowgreen.svg)](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) [![Mobi/Kindle](https://img.shields.io/badge/gitbook-mobi-yellow.svg)](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler)
 
 Contact me:
+
 * [![Website:](https://img.shields.io/badge/website-LetTheLightIn-000000.svg)](http://www.LetTheLight.in)
 * [![Twitter:](https://img.shields.io/badge/twitter-fearless0-26A9E9.svg)](https://twitter.com/fearless0)
 * [![Github:](https://img.shields.io/badge/github-mrfearless-7A8E97.svg)](https://github.com/mrfearless)
