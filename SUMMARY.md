@@ -1,8 +1,8 @@
 # Summary
 
-* Preface
+* [Preface](/README.md)
 * [Author](author.md)
-* Introduction
+* [Introduction](introduction.md)
 * [Guidelines](guidelines.md)
 * [The HotMenu Quest](the-hotmenu-quest.md)
 * [Our First Control](/our-first-control.md)
