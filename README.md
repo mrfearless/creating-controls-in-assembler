@@ -1,21 +1,6 @@
-<div align="center">
-<strong><h1>Creating Controls In Assembler</h1></strong>
-</div>
+# Creating Controls In Assembler
 
-<p align="center">
-<a><img src="https://img.shields.io/badge/platform-windows-175E80.svg"</a>
- <a><img src="https://img.shields.io/badge/language-assembler-brightgreen.svg"></a>
- <a><img src="https://img.shields.io/badge/masm-x86-red.svg"></a></br>
- <a href="https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler"><img src="https://img.shields.io/badge/gitbook-pdf-green.svg"</a>
- <a href="https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler"><img src="https://img.shields.io/badge/gitbook-epub-yellowgreen.svg"</a>
- <a href="https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler"><img src="https://img.shields.io/badge/gitbook-mobi-yellow.svg"</a></br>
- <a href="https://www.LetTheLight.in"><img src="https://img.shields.io/badge/Let%20The-Light%20In-000000.svg"</a>
- <a href="https://github.com/mrfearless"><img src="https://img.shields.io/badge/github-mrfearless-7A8E97.svg"/></a>
- <a href="https://twitter.com/fearless0"><img src= "https://img.shields.io/badge/twitter-fearless0-26A9E9.svg"></a>
-</p>
-<hr>
-
-<p align="center"><a><img src="https://github.com/mrfearless/creating-controls-in-assembler/blob/master/cover_small.jpg"</a></p>
+![](/cover_small.jpg)
 
 A book, by [mrfearless](https://github.com/mrfearless), published on [Gitbook.com](/Gitbook.com), about creating controls in assembly language.
 
@@ -26,7 +11,12 @@ It covers the main areas of developing an example control, SimpleButton, which t
 * The Github repository for this book can be found here: [https://github.com/mrfearless/creating-controls-in-assembler](https://github.com/mrfearless/creating-controls-in-assembler)
 * This Gitbook can be found online here: [https://mrfearless.gitbooks.io/creating-controls-in-assembler](https://mrfearless.gitbooks.io/creating-controls-in-assembler)
 
-[Read for free online](https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/) \(recommended\) or download the [PDF](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) or [ePUB](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) or [Mobi/Kindle](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler) editions.
+[Read for free online](https://mrfearless.gitbooks.io/creating-controls-in-assembler/content/) \(recommended\) or download the [![PDF](https://img.shields.io/badge/gitbook-pdf-green.svg)](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) or [![ePUB](https://img.shields.io/badge/gitbook-epub-yellowgreen.svg)](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) or [![Mobi/Kindle](https://img.shields.io/badge/gitbook-mobi-yellow.svg)](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler) editions.
+
+Contact me:
+* [![Twitter:](https://img.shields.io/badge/twitter-fearless0-26A9E9.svg)](https://twitter.com/fearless0)
+* [![Website:](https://img.shields.io/badge/Let%20The-Light%20In-000000.svg)](http://www.LetTheLight.in)
+* [![Github:](https://img.shields.io/badge/github-mrfearless-7A8E97.svg)](https://github.com/mrfearless)
 
 You can support this book by donating on [Gratipay](https://gratipay.com/custom-controls-in-assembler/)
 
