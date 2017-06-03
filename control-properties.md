@@ -1,12 +1,12 @@
 # Control Properties
 
-When registering our custom control, the `cbWndExtra` field of the WNDCLASSEX is used for storing additional extra bytes per instance of the control we create. 
+When registering our custom control, the `cbWndExtra` field of the WNDCLASSEX is used for storing additional extra bytes per instance of the control we create.
 
-In the early days of my control creation I used these extra storage bytes to store anywhere up to 128 bytes of data to hold various variables used by the control. I came across some documentation later on that suggested there was a limit of 40 bytes in some earlier versions of windows os, and that as the bytes are being allocated from the local system heap, the RegisterClassEx function might fail if greater than 40 bytes is requested. See https://msdn.microsoft.com/en-us/library/ms633574\(VS.85\).aspx\#extra\_window\_memory
+In the early days of my control creation I used these extra storage bytes to store anywhere up to 128 bytes of data to hold various variables used by the control. I came across some documentation later on that suggested there was a limit of 40 bytes in some earlier versions of windows os, and that as the bytes are being allocated from the local system heap, the RegisterClassEx function might fail if greater than 40 bytes is requested. See [https://msdn.microsoft.com/en-us/library/ms633574\(VS.85\).aspx\#extra\_window\_memory](https://msdn.microsoft.com/en-us/library/ms633574%28VS.85%29.aspx#extra_window_memory)
 
 Once the extra bytes are allocated, they can accessed and read via calls to GetWindowLong \(or GetWindowLongPtr if compiling for x64\) and passing the handle of the window \(our control's handle\) and an index offset to the bytes required. For setting the values we use the calls to SetWindowLong \(or SetWindowLongPtr if compiling for x64\), again passing the window handle, an offset to the bytes to be set and a value to set.
 
-GetWindowLong retrieves the 32-bit `DWORD` value at the specified offset into the extra window memory, whereas SetWindowLong sets a 32-bit `DWORD` value at the specified offset into the extra window memory. The extra window memory is reserved by specifying a nonzero value in the `cbWndExtra` member of the WNDCLASSEX structure used with the RegisterClassEx function. 
+GetWindowLong retrieves the 32-bit `DWORD` value at the specified offset into the extra window memory, whereas SetWindowLong sets a 32-bit `DWORD` value at the specified offset into the extra window memory. The extra window memory is reserved by specifying a nonzero value in the `cbWndExtra` member of the WNDCLASSEX structure used with the RegisterClassEx function.
 
 ##### Using Macros To Get/Set Properties
 
@@ -25,7 +25,7 @@ When I was using the earlier technique of allocating as much bytes as I wanted i
 ; _GetFont - helper function - Gets the Controls font
 ;-------------------------------------------------------------------------------------
 _GetFont MACRO hControl:REQ
-    Invoke GetWindowLong, hControl, @ControlFont		
+    Invoke GetWindowLong, hControl, @ControlFont        
 ENDM
 
 ;-------------------------------------------------------------------------------------
@@ -46,9 +46,9 @@ The actual allocation of memory for these structures used for internal and exter
 
 ##### Internal Wrapper Functions
 
-The helper functions, used in our example **SimpleButton** control, are just wrapper functions using GetWindowLong and SetWindowLong to get and set the internal and external variables/properties: `__GetIntProperty`,  `__SetIntProperty`, `__GetExtProperty` and `__SetExtProperty`. 
+The helper functions, used in our example **SimpleButton** control, are just wrapper functions using GetWindowLong and SetWindowLong to get and set the internal and external variables/properties: `__GetIntProperty`,  `__SetIntProperty`, `__GetExtProperty` and `__SetExtProperty`.
 
-For the end-user who will use our **SimpleButton** control they can access the **external** properties via calls to `SimpleButtonGetProperty` and `SimpleButtonSetProperty` or by using the custom messages: `SB_GETPROPERTY` and `SB_SETPROPERTY` with the SendMessage api call. These functions then call the appropriate internal helper functions \(wrapper functions for GetWindowLong and SetWindowLong\). 
+For the end-user who will use our **SimpleButton** control they can access the **external** properties via calls to `SimpleButtonGetProperty` and `SimpleButtonSetProperty` or by using the custom messages: `SB_GETPROPERTY` and `SB_SETPROPERTY` with the SendMessage api call. These functions then call the appropriate internal helper functions \(wrapper functions for GetWindowLong and SetWindowLong\).
 
 The **internal** variables/properties are _**not**_ exposed to the end-user by design \(this can of course be changed if you need to or your control requires it for whatever reason\).
 
