@@ -55,15 +55,15 @@ SimpleButtonRegister PROC PUBLIC
         mov wc.lpszClassName, eax
         mov eax, hinstance
         mov wc.hInstance, eax
-        mov wc.lpfnWndProc, OFFSET _SB_WndProc ; points to our main controls window procedure
+        mov wc.lpfnWndProc, OFFSET _SB_WndProc ; points to main controls window proc
         mov wc.hCursor, NULL ; not set, we can handle this in our main window proc
         mov wc.hIcon, 0
         mov wc.hIconSm, 0
-        mov wc.lpszMenuName, NULL
+        mov wc.lpszMenuName, NULL ; no menu needed
         mov wc.hbrBackground, NULL ; handle drawing ourselves in main window proc
         mov wc.style, NULL
         mov wc.cbClsExtra, 0
-        mov wc.cbWndExtra, 8 ; dword ptr to internal properties and to external properties memory block
+        mov wc.cbWndExtra, 8 ; dword ptr to internal & external properties memory block
         Invoke RegisterClassEx, Addr wc
     .ENDIF  
     ret
