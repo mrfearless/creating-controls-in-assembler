@@ -19,6 +19,12 @@
 * [Painting Our Control](/painting-our-control.md)
 * [Using Our Control](/using-our-control.md)
 * [Control Properties](control-properties.md)
+  * Using Macros To Get/Set Properties
+  * Using GetWindowLong/SetWindowLong To Get/Set Properties
+  * Internal Wrapper Functions
+  * RadASM Auto-complete
 * [Additional Resources](additional-resources.md)
   * [The ModernUI Framework](the-modernui-framework.md)
+
+
 
