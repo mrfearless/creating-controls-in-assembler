@@ -15,6 +15,5 @@
 * [Control Properties](control-properties.md)
 * [Additional Resources](additional-resources.md)
   * [The ModernUI Framework](the-modernui-framework.md)
-
-
+* Controls & Modern UI Design
 
