@@ -60,12 +60,6 @@ SimpleButtonCreate PROC PRIVATE hWndParent:DWORD, lpszText:DWORD, xpos:DWORD, /
     Invoke CreateWindowEx, NULL, Addr SimpleButtonClass, lpszText, dwNewStyle, xpos, /
                            ypos, controlwidth, controlheight, hWndParent, / 
                            dwResourceID, hinstance, NULL
-    mov hControl, eax
-    .IF eax != NULL
-        ; any other code to handle something else here, 
-        ; otherwise we return handle in eax or NULL if failed to create control
-    .ENDIF
-    mov eax, hControl
     ret
 SimpleButtonCreate ENDP
 ```
