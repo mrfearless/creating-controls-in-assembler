@@ -39,7 +39,7 @@ Here is our `SimpleButtonCreate` function:
 
 ```x86asm
 ;-------------------------------------------------------------------------------------
-; SimpleButtonCreate - Returns handle in eax of newly created control or NULL otherwise
+; SimpleButtonCreate - Returns handle in eax of newly created control or NULL
 ;-------------------------------------------------------------------------------------
 SimpleButtonCreate PROC PRIVATE hWndParent:DWORD, lpszText:DWORD, xpos:DWORD, /
                                 ypos:DWORD, controlwidth:DWORD, controlheight:DWORD, /
