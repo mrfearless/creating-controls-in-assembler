@@ -2,14 +2,10 @@
   "title": "Custom Controls in Assembler",
   "description": "Use the win32 api and assembly language to create custom controls for windows.",
   "plugins": [
-    "anchors",
     "disqus",
     "github",
     "meta",
     "splitter",
-    "page-toc-button",
-    "anchor-navigation",
-    "creativecommons",
     "copy-code-button",
     "word-count"
   ],
