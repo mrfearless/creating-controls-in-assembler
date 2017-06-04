@@ -4,9 +4,7 @@ The `SimpleButtonCreate` function will allow the user to create the **SimpleButt
 
 Most of the parameters of the `SimpleButtonCreate` function are self-explanatory: the width, height, position of the control, the text to display, the parent handle of our child control and the resource id number associated with the control.
 
-The `dwStyle` parameter gives us a number of options to allow us or the user to tailor the control to our requirements, based on the styles we define for its usage.
-
-Unfortunately their isn't much in the microsoft documentation to indicate what values we can pass to the `dwStyle` parameter apart from the standard windows defined ones: `WS_BORDER`, `WS_VISIBLE`, `WS_CHILD` etc
+The `dwStyle` parameter gives us a number of options to allow us or the user to tailor the control to our requirements, based on the styles we define for its usage. Unfortunately their isn't much in the microsoft documentation to indicate what values we can pass to the `dwStyle` parameter apart from the standard windows defined ones: `WS_BORDER`, `WS_VISIBLE`, `WS_CHILD` etc
 
 The most useful information I came across that explains the `dwStyle` flags parameter of [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) is from Raymond Chen's old new thing [blog](https://blogs.msdn.microsoft.com/oldnewthing/20031203-00/?p=41633/)
 
@@ -31,9 +29,7 @@ SBES_RIGHT              EQU 8
 SBES_ALL                EQU SBES_LEFT + SBES_TOP + SBES_BOTTOM + SBES_RIGHT
 ```
 
-So our `SimpleButtonCreate` function is just a wrapper to register the control if not already registered and a call to [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) to create it, returning the handle to the newly created control in `eax`. Also we check with the `dwStyle` parameter which flags are passed to `SimpleButtonCreate`, to ensure for example that `WS_CHILD` and `WS_VISIBLE` is included and any other flags we might want as well. This check is also performed in the `_SB_Init` procedure in case our **SimpleButton** control was created via a dialog resource.
-
-Of course you are free to define how you want your control to behave at creation and what flags if any you want to force to be included or even excluded from use.
+So our `SimpleButtonCreate` function is just a wrapper to register the control if not already registered and a call to [CreateWindowEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632680%28v=vs.85%29.aspx) to create it, returning the handle to the newly created control in `eax`. Also we check with the `dwStyle` parameter which flags are passed to `SimpleButtonCreate`, to ensure for example that `WS_CHILD` and `WS_VISIBLE` is included and any other flags we might want as well. This check is also performed in the `_SB_Init` procedure in case our **SimpleButton** control was created via a dialog resource. Of course you are free to define how you want your control to behave at creation and what flags if any you want to force to be included or even excluded from use.
 
 Here is our `SimpleButtonCreate` function:
 
