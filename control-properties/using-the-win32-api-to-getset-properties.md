@@ -1,8 +1,8 @@
 # Using The Win32 API To Get/Set Properties
 
-Ultimately, as the controls I created became more complex with more internal variables stored in the `cbWndExtra` bytes, I changed my technique to only use 8 bytes in the `cbWndExtra` field. 
+Ultimately, as the controls I created became more complex with more internal variables stored in the `cbWndExtra` bytes, I changed my technique to only use 8 bytes in the `cbWndExtra` field.
 
-I used the GetWindowLong api function to retrieve data in the extra window memory of `cbWndExtra`, and the SetWindowLong api function to set data in this memory.
+I used the [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) api function to retrieve data in the extra window memory of `cbWndExtra`, and the [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx) api function to set data in this memory.
 
 The data to get or set was one `DWORD` value \(`Invoke GetWindowLong, hControl, 0`\) for a pointer to a structure that stored internal variables, and another `DWORD` value \(`Invoke GetWindowLong, hControl, 4`\) for a pointer to a structure that stored variables that are visible and can be modified externally by the user of the control.
 
