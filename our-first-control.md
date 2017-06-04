@@ -20,7 +20,7 @@ Functions that will defined for use **externally** by the end-user of our contro
 
 ```x86asm
 SimpleButtonRegister    PROTO
-SimpleButtonCreate      PROTO :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD
+SimpleButtonCreate      PROTO :DWORD,:DWORD,:DWORD,:DWORD,:DWORD,:DWORD,:DWORD,:DWORD
 SimpleButtonGetProperty PROTO :DWORD, :DWORD
 SimpleButtonSetProperty PROTO :DWORD, :DWORD, :DWORD
 SimpleButtonGetState    PROTO :DWORD
