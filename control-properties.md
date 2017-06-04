@@ -8,33 +8,7 @@ Once the extra bytes are allocated, they can accessed and read via calls to [Get
 
 [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) retrieves the 32-bit `DWORD` value at the specified offset into the extra window memory, whereas [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx) sets a 32-bit `DWORD` value at the specified offset into the extra window memory. The extra window memory is reserved by specifying a nonzero value in the `cbWndExtra` member of the [WNDCLASSEX](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633577%28v=vs.85%29.aspx) structure used with the [RegisterClassEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633587%28v=vs.85%29.aspx) function.
 
-##### Using Macros To Get/Set Properties
-
-When I was using the earlier technique of allocating as much bytes as I wanted in `cbWndExtra` \(without realising or coming across any downsides\) I used a series of macros to help get/set the variables and constants to help define the offsets the macro would get/set, for example:
-
-```x86asm
-@Style                      EQU 0h  ; some style flags
-@MouseOverFlag              EQU 4h  ; 0 = no mouse over, 1 = mouse is over control
-@SelectedState              EQU 8h  ; 0 = not selected, 1 = selected
-@ControlFont                EQU 12  ; hFont
-...
-```
-
-```x86asm
-;-------------------------------------------------------------------------------------
-; _GetFont - helper function - Gets the Controls font
-;-------------------------------------------------------------------------------------
-_GetFont MACRO hControl:REQ
-    Invoke GetWindowLong, hControl, @ControlFont        
-ENDM
-
-;-------------------------------------------------------------------------------------
-; _SetFont - helper function - Sets the Controls font
-;-------------------------------------------------------------------------------------
-_SetFont MACRO hControl:REQ, ptrControlData:REQ
-    Invoke SetWindowLong, hControl, @ControlFont, ptrControlData
-ENDM
-```
+##### 
 
 This is still a valid technique if the amount of bytes is less than 40. Or even using the [GetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633564%28v=vs.85%29.aspx) / [SetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633568%28v=vs.85%29.aspx) api calls is viable if using an atom - which is faster than [GetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633564%28v=vs.85%29.aspx) / [SetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633568%28v=vs.85%29.aspx) with a string, but both are still slower than [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) / [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx) as far as I am aware.
 
