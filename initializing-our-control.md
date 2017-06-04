@@ -31,10 +31,10 @@ Invoke __SetExtProperty, hControl, @SimpleButtonBorderStyle, SBES_ALL
 Only some of the external properties are shown for brevity, the ones that are shown are define in `SimpleButton.inc` as:
 
 ```x86asm
-@SimpleButtonTextColor          EQU 4
-@SimpleButtonBackColor          EQU 24
-@SimpleButtonBorderColor        EQU 44
-@SimpleButtonBorderStyle        EQU 64
+@SimpleButtonTextColor   EQU 4
+@SimpleButtonBackColor   EQU 24
+@SimpleButtonBorderColor EQU 44
+@SimpleButtonBorderStyle EQU 64
 ```
 
 For color properties \([COLORREF](https://msdn.microsoft.com/en-us/library/vs/alm/dd183449%28v=vs.85%29.aspx)\) we make use of a macro called `SRGBCOLOR` that is included in `SimpleButton.inc`:
