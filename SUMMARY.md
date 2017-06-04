@@ -14,7 +14,7 @@
 * [Inside Our Control](/inside-our-control.md)
   * [Property Structures](inside-our-control/property-structures.md)
   * [The Memory Used To Store Our Controls Properties](inside-our-control/the-memory-used-to-store-our-controls-properties.md)
-  * Handling Other Messages For Our Control
+  * [Handling Other Messages For Our Control](inside-our-control/handling-other-messages-for-our-control.md)
 * [Initializing Our Control](/initializing-our-control.md)
 * [Painting Our Control](/painting-our-control.md)
 * [Using Our Control](/using-our-control.md)
