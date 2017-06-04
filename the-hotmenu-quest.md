@@ -8,7 +8,7 @@ My earliest attempt was a control called **HotMenu** - which was a menu panel sy
 
 The image below depicts the normal Steam client menu usage. The menu panel drops down to display a list of menu items to choose from. As the mouse moves over the menu items they are highlighted. Additionally when the menu bar is clicked on any menu bar item and the mouse then hovers over any of the other menu bar items, the menu panel dropdown automatically is displayed, again with its list of menu items:
 
-![Steam Client Menus](/assets/SteamClientMenus.gif) ![](/assets/SteamClientMenuStatic.png)
+![](/assets/SteamClientMenu.gif) ![](/assets/SteamClientMenu.png)
 
 So taking inspiration from the Steam client menu system and wanted to adapt it to a custom control in win32 assembler, I began the development of **HotMenu.**
 
