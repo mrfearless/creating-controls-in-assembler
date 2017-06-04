@@ -10,7 +10,7 @@ We use the `WM_CREATE` message of our **SimpleButton** control to initialize the
 
 `WM_NCCREATE` is one of the first messages a control receives and the `WM_NCDESTROY` message is one of the last. Its still possible to make use of the `WM_NCCREATE` message to handle some basic setup of controls, with the above mentioned caveat taken into account.
 
-Our `WM_CREATE` message of the `_SB_WndProc` function for our **SimpleButton** control looks like this:
+Our `WM_CREATE` message of the `_SB_WndProc` function looks like this:
 
 ```x86asm
 ...
@@ -22,8 +22,6 @@ Our `WM_CREATE` message of the `_SB_WndProc` function for our **SimpleButton** c
     ret 
 ...
 ```
-
-
 
 
 
