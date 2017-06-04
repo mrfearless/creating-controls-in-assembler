@@ -10,11 +10,11 @@ When I was using the earlier technique of allocating as much bytes as I wanted i
 ...
 ```
 
-With the constants defined and appropriate named \(using a prefix of '@'\) we could then define macros to get and set our property values. Each constant is an offset into the extra window bytes allocated by `cbWndExtra`
+With the constants defined and appropriate named \(using a prefix of '@'\) we could then define macros to get and set our property values. Each constant is an offset into the extra window bytes allocated by `cbWndExtra` during the control's registration via [RegisterClassEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633587%28v=vs.85%29.aspx).
 
-The macros then called the GetWidowLong or SetWindowLong to get or set the value at the appropriate index offset.
+The macros then called the [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) or [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx) to get or set the value at the appropriate index offset.
 
-Here is and example of two macros used to get and set the font handle - stored at index offset `0x12 `
+Here is and example of two macros used to get and set the font handle - stored at index offset `0x12`
 
 ```x86asm
 ;-------------------------------------------------------------------------------------
