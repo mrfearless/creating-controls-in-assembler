@@ -21,7 +21,7 @@
 * [Control Properties](control-properties.md)
   * [Using Macros To Get/Set Properties](control-properties/using-macros-to-getset-properties.md)
   * [Using GetWindowLong/SetWindowLong To Get/Set Properties](control-properties/using-getwindowlongsetwindowlong-to-getset-properties.md)
-  * Internal Wrapper Functions
+  * [Internal Wrapper Functions](control-properties/internal-wrapper-functions.md)
   * RadASM Auto-complete
 * [Additional Resources](additional-resources.md)
   * [The ModernUI Framework](the-modernui-framework.md)
