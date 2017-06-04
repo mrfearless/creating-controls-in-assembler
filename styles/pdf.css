@@ -1,0 +1,14 @@
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+  text-align: justify;
+}
+
+pre {
+  word-break: break-all;
+  /* Non standard for webkit, but it does work on the Mac when generating the PDF */
+  word-break: break-word;
+}
