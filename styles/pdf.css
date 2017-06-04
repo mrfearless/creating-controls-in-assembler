@@ -12,3 +12,8 @@ pre {
   /* Non standard for webkit, but it does work on the Mac when generating the PDF */
   word-break: break-word;
 }
+
+h1 {
+    margin-top: 0;
+    padding:0;
+}
