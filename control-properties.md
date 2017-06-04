@@ -14,29 +14,7 @@ Once the extra bytes are allocated, they can accessed and read via calls to [Get
 
 ##### 
 
-##### RadASM Auto-complete
+##### 
 
-Another reason I used this approach is RadASM's auto-complete feature. By editing two .api files and adding some information I can include this information to make it easier to code using the **SimpleButton** control. So I easily can add autocomplete for the `SimpleButtonGetProperty` function and it will show a dropdown list of possible values when I am ready to supply the 2nd parameter \(`dwProperty`\)
 
-Contents of RadASM\Masm\masmApiCall.api:
-
-```
-SimpleButtonGetProperty,hSimpleButton,dwProperty
-```
-
-Contents of RadASM\Masm\masmApiConst.api:
-
-```
-2SimpleButtonGetProperty,@SimpleButtonTextFont,@SimpleButtonTextColor,@SimpleButtonTextColorAlt,
-@SimpleButtonTextColorSel,@SimpleButtonTextColorSelAlt,@SimpleButtonTextColorDisabled,@SimpleButtonBackColor,
-@SimpleButtonBackColorAlt,@SimpleButtonBackColorSel,@SimpleButtonBackColorSelAlt,@SimpleButtonBackColorDisabled,
-@SimpleButtonBorderColor,@SimpleButtonBorderColorAlt,@SimpleButtonBorderColorSel,@SimpleButtonBorderColorSelAlt,
-@SimpleButtonBorderColorDisabled,@SimpleButtonBorderStyle
-```
-
-This is what RadASM's auto-complete looks like when implemented:
-
-![](/assets/SimpleButtonGetProperty.gif)
-
-The project source also includes the `masmApiCall.api.txt`, `masmApiConst.api.txt`and `masmMessage.api.txt` text files that incorporate these calls and constants for use with RadASM's autocomplete feature, you just need to open the appropriate .api file and paste the contents at the end of the file and restart RadASM for them to be available to you. Instructions are included in the text files themselves as to which file it related to and the typical location of those .api files.
 
