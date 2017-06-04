@@ -36,6 +36,25 @@ We are specifying that we will handle erasing of our control's background oursel
 
 We can also allow our **SimpleButton** control to be enabled or disabled via a standard `WM_ENABLE` message, which forces a repaint of our control. And similarly we can allow a font change and repaint via a `WM_SETFONT` message.
 
+```x86asm
+...
+.ELSEIF eax == WM_ENABLE
+    Invoke __SetIntProperty, hWin, @SimpleButtonEnabledState, wParam
+    Invoke InvalidateRect, hWin, NULL, TRUE
+    mov eax, 0
+
+.ELSEIF eax == WM_SETTEXT
+    Invoke DefWindowProc, hWin, uMsg, wParam, lParam
+    Invoke InvalidateRect, hWin, NULL, TRUE
+    ret
+
+.ELSEIF eax == WM_SETFONT
+    Invoke __SetExtProperty, hWin, @SimpleButtonTextFont, lParam
+    .IF lParam == TRUE
+        Invoke InvalidateRect, hWin, NULL, TRUE
+    .ENDIF  
+```
+
 Our custom messages \(`SB_GETPROPERTY` and `SB_SETPROPERTY`\) are included as well and are just simple calls to our internal helper functions \(or framework library if using one\):
 
 ```x86asm
