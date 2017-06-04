@@ -23,11 +23,7 @@ Our `WM_CREATE` message of the `_SB_WndProc` function for our **SimpleButton** c
 ...
 ```
 
-##### 
 
-##### 
-
-##### 
 
 
 
