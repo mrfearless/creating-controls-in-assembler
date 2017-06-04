@@ -37,7 +37,9 @@ Here is the complete `_SB_PaintBackground` function to illustrate this:
 ;-------------------------------------------------------------------------------------
 ; _SB_PaintBackground - Paints the background of the SimpleButton control
 ;-------------------------------------------------------------------------------------
-_SB_PaintBackground PROC PRIVATE hControl:DWORD, hdc:DWORD, lpRect:DWORD, bEnabledState:DWORD, bMouseOver:DWORD, bSelectedState:DWORD
+_SB_PaintBackground PROC PRIVATE hControl:DWORD, hdc:DWORD, lpRect:DWORD, /
+                                 bEnabledState:DWORD, bMouseOver:DWORD, /
+                                 bSelectedState:DWORD
     LOCAL BackColor:DWORD
     LOCAL hBrush:DWORD
     LOCAL hOldBrush:DWORD
