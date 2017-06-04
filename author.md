@@ -21,4 +21,3 @@ That was over 15 years ago. I never told my old boss of my self-taught accomplis
 Learning is a great and rewarding experience. And sharing that knowledge is a way of repaying that. Never let anyone tell you that you can't do something, and never tell anyone they can't do something. They might just prove you wrong.
 
 fearless
-
