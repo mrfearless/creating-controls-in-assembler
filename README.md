@@ -13,10 +13,7 @@ It covers the main areas of developing an example control, SimpleButton, which t
 * This Gitbook can be found online here: [https://mrfearless.gitbooks.io/creating-controls-in-assembler](https://mrfearless.gitbooks.io/creating-controls-in-assembler)
 * Read or download:
   [![Online](https://img.shields.io/badge/gitbook-online-brightgreen.svg)](https://mrfearless.gitbooks.io/creating-controls-in-assembler) [![PDF](https://img.shields.io/badge/gitbook-pdf-green.svg)](https://www.gitbook.com/download/pdf/book/mrfearles/creating-controls-in-assembler) [![ePUB](https://img.shields.io/badge/gitbook-epub-yellowgreen.svg)](https://www.gitbook.com/download/epub/book/mrfearles/creating-controls-in-assembler) [![Mobi/Kindle](https://img.shields.io/badge/gitbook-mobi-yellow.svg)](https://www.gitbook.com/download/mobi/book/mrfearles/creating-controls-in-assembler)
-
-Contact me:
-
-[![Email  :](https://img.shields.io/badge/email%20%20-send%20mail%20-6C2FDE.svg)](mailto:fearless.is.my.name@gmail.com) [![Twitter:](https://img.shields.io/badge/twitter-fearless0%20%20-26A9E9.svg)](https://twitter.com/fearless0) [![Github :](https://img.shields.io/badge/github-mrfearless-7A8E97.svg)](https://github.com/mrfearless)
+* Contact me: [![Email  :](https://img.shields.io/badge/email%20%20-send%20mail%20-6C2FDE.svg)](mailto:fearless.is.my.name@gmail.com) [![Twitter:](https://img.shields.io/badge/twitter-fearless0%20%20-26A9E9.svg)](https://twitter.com/fearless0) [![Github :](https://img.shields.io/badge/github-mrfearless-7A8E97.svg)](https://github.com/mrfearless)
 
 You can support this book by donating on [Gratipay](https://gratipay.com/custom-controls-in-assembler/)
 
