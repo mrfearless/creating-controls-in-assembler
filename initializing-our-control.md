@@ -37,7 +37,7 @@ Only some of the external properties are shown for brevity, the ones that are sh
 @SimpleButtonBorderStyle        EQU 64
 ```
 
-For color properties \([COLORREF](https://msdn.microsoft.com/en-us/library/vs/alm/dd183449%28v=vs.85%29.aspx)\) we make use of a macro that is included in `SimpleButton.inc`:
+For color properties \([COLORREF](https://msdn.microsoft.com/en-us/library/vs/alm/dd183449%28v=vs.85%29.aspx)\) we make use of a macro called `SRGBCOLOR` that is included in `SimpleButton.inc`:
 
 ```x86asm
 SBRGBCOLOR MACRO red:REQ, green:REQ, blue:REQ
