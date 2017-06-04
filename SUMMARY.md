@@ -13,7 +13,7 @@
 * [Creating Our Control](/creating-our-control.md)
 * [Inside Our Control](/inside-our-control.md)
   * [Property Structures](inside-our-control/property-structures.md)
-  * The Memory Used To Store Our Controls Properties
+  * [The Memory Used To Store Our Controls Properties](inside-our-control/the-memory-used-to-store-our-controls-properties.md)
   * Handling Other Messages For Our Control
 * [Initializing Our Control](/initializing-our-control.md)
 * [Painting Our Control](/painting-our-control.md)
