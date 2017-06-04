@@ -12,7 +12,7 @@
 * [Registering Our Control](/registering-our-control.md)
 * [Creating Our Control](/creating-our-control.md)
 * [Inside Our Control](/inside-our-control.md)
-  * Property Structures
+  * [Property Structures](inside-our-control/property-structures.md)
   * The Memory Used To Store Our Controls Properties
   * Handling Other Messages For Our Control
 * [Initializing Our Control](/initializing-our-control.md)
@@ -21,6 +21,4 @@
 * [Control Properties](control-properties.md)
 * [Additional Resources](additional-resources.md)
   * [The ModernUI Framework](the-modernui-framework.md)
-
-
 
