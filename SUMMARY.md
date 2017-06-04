@@ -8,7 +8,7 @@
   * [The HotMenu Quest](/the-hotmenu-quest.md)
 * [Our First Control](/our-first-control.md)
   * [External End-User Functions](our-first-control/external-end-user-functions.md)
-  * Internal Developer Functions
+  * [Internal Developer Functions](our-first-control/internal-developer-functions.md)
 * [Registering Our Control](/registering-our-control.md)
 * [Creating Our Control](/creating-our-control.md)
 * [Inside Our Control](/inside-our-control.md)
