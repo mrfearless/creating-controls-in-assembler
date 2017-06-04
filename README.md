@@ -16,8 +16,8 @@ It covers the main areas of developing an example control, SimpleButton, which t
 
 Contact me:
 
-* [![Email  :](https://img.shields.io/badge/email%20%20-contact-6C2FDE.svg)](mailto:fearless.is.my.name@gmail.com)
-* [![Twitter:](https://img.shields.io/badge/twitter-fearless0-26A9E9.svg)](https://twitter.com/fearless0)
+* [![Email  :](https://img.shields.io/badge/email%20%20-contact%20%20%20-6C2FDE.svg)](mailto:fearless.is.my.name@gmail.com)
+* [![Twitter:](https://img.shields.io/badge/twitter-fearless0%20%20-26A9E9.svg)](https://twitter.com/fearless0)
 * [![Github :](https://img.shields.io/badge/github-mrfearless-7A8E97.svg)](https://github.com/mrfearless)
 
 You can support this book by donating on [Gratipay](https://gratipay.com/custom-controls-in-assembler/)
