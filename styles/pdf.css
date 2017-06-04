@@ -17,3 +17,9 @@ h1 {
     margin-top: 0;
     padding:0;
 }
+
+.markdown-section h1, h1
+{
+    margin-top: 0px;
+    padding: 0px;
+}
