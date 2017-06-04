@@ -63,7 +63,7 @@ SimpleButtonRegister PROC PUBLIC
         mov wc.hbrBackground, NULL ; handle drawing ourselves in main window proc
         mov wc.style, NULL
         mov wc.cbClsExtra, 0
-        mov wc.cbWndExtra, 8 ; dword ptr to internal & external properties memory block
+        mov wc.cbWndExtra, 8 ; dword ptr to internal & external properties memory
         Invoke RegisterClassEx, Addr wc
     .ENDIF  
     ret
