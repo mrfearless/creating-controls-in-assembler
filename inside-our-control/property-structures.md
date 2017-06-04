@@ -1,6 +1,6 @@
 # Property Structures
 
-Note that I use two structures for defining the variables  I will use in the control internally and externally \(named `_SIMPLEBUTTON_PROPERTIES` and `SIMPLEBUTTON_PROPERTIES`\), although they aren't used directly by most controls, instead I opt to use constant values that are offsets into the allocated memory.
+Note that in the `WM_CREATE` message of the main processing function `_SB_WndProc`, I use two structures for defining the variables that I will use in the control **internally** _and_ **externally** \(named `_SIMPLEBUTTON_PROPERTIES` and `SIMPLEBUTTON_PROPERTIES`\), although they aren't used directly by most controls, instead I opt to use constant values that are offsets into the allocated memory.
 
 For example, the **internal** variables structure I use is defined as such:
 
@@ -23,4 +23,6 @@ with the variables \(or properties\) used, defined as:
 ```
 
 So the memory block that the four internal variables are stored in, start at offset 0 for the first one, offset 4 for the next and so on \(assuming all variables are dword values of course\). We will see later on getting and setting these internal and external variables using the helper functions: `__GetIntProperty`, `__SetIntProperty`, `__GetExtProperty` and `__SetExtProperty`.
+
+The external properties and structure is defined similarly in the SimpleButton.inc file for the end-user. Typically the end-user wont make use of the structure directly, its just added as a convienance - mainly for the use by the developer. It is easier to use `SIZEOF` _structurename_ to pass to the `__AllocMemProperties` function to determine the size of memory to allocate for our control's properties.
 
