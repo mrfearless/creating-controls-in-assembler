@@ -14,20 +14,7 @@ Firstly I create two files: `SimpleButton.asm` that will contain the main code f
 
 `SimpleButton.inc` will include function prototypes for users to call that will create and manipulate the **SimpleButton** control. Also included will be any structures or constants that will be required for the user to use in conjunction with the functions we create, and we will also include some custom messages for our control as well.
 
-##### External End-User Functions
-
-Functions that will defined for use **externally** by the end-user of our control will be:
-
-```x86asm
-SimpleButtonRegister    PROTO
-SimpleButtonCreate      PROTO :DWORD,:DWORD,:DWORD,:DWORD,:DWORD,:DWORD,:DWORD,:DWORD
-SimpleButtonGetProperty PROTO :DWORD, :DWORD
-SimpleButtonSetProperty PROTO :DWORD, :DWORD, :DWORD
-SimpleButtonGetState    PROTO :DWORD
-SimpleButtonSetState    PROTO :DWORD, :DWORD
-```
-
-The `SimpleButton.asm` will contain these functions _and_ other functions designed to be used internally by the control itself. I prefix the functions that will be used **internally** with an **underscore** and an **abbreviation**, but you can use whatever naming convention you desire.
+##### 
 
 ##### Internal Developer Functions
 
