@@ -17,18 +17,28 @@ The macros then called the [GetWindowLong](https://msdn.microsoft.com/en-us/libr
 Here is and example of two macros used to get and set the font handle - stored at index offset `0x12`
 
 ```x86asm
-;-------------------------------------------------------------------------------------
-; _GetFont - helper function - Gets the Controls font
-;-------------------------------------------------------------------------------------
 _GetFont MACRO hControl:REQ
     Invoke GetWindowLong, hControl, @ControlFont        
 ENDM
 
-;-------------------------------------------------------------------------------------
-; _SetFont - helper function - Sets the Controls font
-;-------------------------------------------------------------------------------------
 _SetFont MACRO hControl:REQ, ptrControlData:REQ
     Invoke SetWindowLong, hControl, @ControlFont, ptrControlData
+ENDM
+
+_GetMouseOverFlag MACRO hControl:REQ
+    Invoke GetWindowLong, hControl, @MouseOverFlag		
+ENDM
+
+_SetMouseOverFlag MACRO hControl:REQ, ptrControlData:REQ
+    Invoke SetWindowLong, hControl, @MouseOverFlag, ptrControlData
+ENDM
+
+_GetSelectedState MACRO hControl:REQ
+    Invoke GetWindowLong, hControl, @SelectedState
+ENDM
+
+_SetSelectedState MACRO hControl:REQ, ptrControlData:REQ
+    Invoke SetWindowLong, hControl, @SelectedState, ptrControlData
 ENDM
 ```
 
@@ -42,6 +52,15 @@ mov hFont, eax
 
 ...
 _SetFont hControl, hFont
+...
+
+...
+_SetMouseOverFlag hControl, TRUE
+...
+
+...
+_GetSelectedState hControl
+mov bState, eax
 ...
 ```
 
