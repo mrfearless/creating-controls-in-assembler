@@ -1,6 +1,6 @@
 # Controls & Modern UI Design
 
-The windows controls - the basic and custom controls - are available for users to create in assembler via calls to the win32 api. The image below shows examples of some of the most commonly used ones \(a complete listing of controls can be found on the [msdn microsoft website](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773169%28v=vs.85%29.aspx)\):
+The windows controls - the basic and custom controls - are available for users to create in assembler via calls to the win32 api. The image below shows examples of some of the most commonly used ones \(see [here](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773169%28v=vs.85%29.aspx) for a full list of controls\):
 
 ![](/assets/win32stdcontrols.png)
 
