@@ -18,9 +18,9 @@ That means we have `0x0` - `0xFFFF` reserved for defining styles for our control
 ; SimpleButton Button Styles:
 SBBS_CENTER                     EQU 0h  ; Align text centrally
 SBBS_LEFT                       EQU 1h  ; Align text to the left of the button
-SBBS_HAND                       EQU 2h  ; Show a hand instead of an arrow when mouse moves over button.
-SBBS_PUSHBUTTON                 EQU 4h  ; Simulate button movement when mouse clicks on button
-SBBS_AUTOSTATE                  EQU 8h  ; Automatically toggle between TRUE/FALSE state when clicked.
+SBBS_HAND                       EQU 2h  ; Show a hand when mouse moves over button.
+SBBS_PUSHBUTTON                 EQU 4h  ; Simulate button movement when clicked.
+SBBS_AUTOSTATE                  EQU 8h  ; Automatically toggle state when clicked.
 
 ; SimpleButton Edge (Border) Styles:
 SBES_NONE                       EQU 0
@@ -41,7 +41,9 @@ Here is our `SimpleButtonCreate` function:
 ;-------------------------------------------------------------------------------------
 ; SimpleButtonCreate - Returns handle in eax of newly created control or NULL otherwise
 ;-------------------------------------------------------------------------------------
-SimpleButtonCreate PROC PRIVATE hWndParent:DWORD, lpszText:DWORD, xpos:DWORD, ypos:DWORD, controlwidth:DWORD, controlheight:DWORD, dwResourceID:DWORD, dwStyle:DWORD
+SimpleButtonCreate PROC PRIVATE hWndParent:DWORD, lpszText:DWORD, xpos:DWORD, /
+                                ypos:DWORD, controlwidth:DWORD, controlheight:DWORD, /
+                                dwResourceID:DWORD, dwStyle:DWORD
     LOCAL wc:WNDCLASSEX
     LOCAL hinstance:DWORD
     LOCAL hControl:DWORD
@@ -59,10 +61,13 @@ SimpleButtonCreate PROC PRIVATE hWndParent:DWORD, lpszText:DWORD, xpos:DWORD, yp
         or dwNewStyle, WS_CHILD or WS_VISIBLE or WS_CLIPCHILDREN
     .ENDIF
 
-    Invoke CreateWindowEx, NULL, Addr SimpleButtonClass, lpszText, dwNewStyle, xpos, ypos, controlwidth, controlheight, hWndParent, dwResourceID, hinstance, NULL
+    Invoke CreateWindowEx, NULL, Addr SimpleButtonClass, lpszText, dwNewStyle, xpos, /
+                           ypos, controlwidth, controlheight, hWndParent, / 
+                           dwResourceID, hinstance, NULL
     mov hControl, eax
     .IF eax != NULL
-        ; any other code to handle something else here, otherwise we return handle in eax or NULL if failed to create control
+        ; any other code to handle something else here, 
+        ; otherwise we return handle in eax or NULL if failed to create control
     .ENDIF
     mov eax, hControl
     ret
