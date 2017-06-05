@@ -13,5 +13,14 @@ SimpleButtonGetState    PROTO :DWORD
 SimpleButtonSetState    PROTO :DWORD, :DWORD
 ```
 
+And the custom messages for our control are:
+
+```x86asm
+SB_GETPROPERTY           EQU WM_USER + 1800
+SB_SETPROPERTY           EQU WM_USER + 1799
+SB_GETSTATE              EQU WM_USER + 1798
+SB_SETSTATE              EQU WM_USER + 1797
+```
+
 
 
