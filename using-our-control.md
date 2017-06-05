@@ -126,5 +126,5 @@ As we have specified the resource id defined for our control \(`IDC_SB1`\), we c
 ...
 ```
 
-In the example code above, we show a simple [MessageBox](https://msdn.microsoft.com/en-us/library/windows/desktop/ms645505%28v=vs.85%29.aspx) when our SimpleButton is clicked.
+In the example code above, we show a simple [MessageBox](https://msdn.microsoft.com/en-us/library/windows/desktop/ms645505%28v=vs.85%29.aspx) when our **SimpleButton** control is clicked.
 
