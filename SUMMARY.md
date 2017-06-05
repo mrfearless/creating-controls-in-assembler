@@ -12,7 +12,7 @@
 * [Registering Our Control](/registering-our-control.md)
 * [Creating Our Control](/creating-our-control.md)
 * [Inside Our Control](/inside-our-control.md)
-  * On Creation: WM\_CREATE
+  * [On Creation: WM\_CREATE](inside-our-control/on-creation-wmcreate.md)
   * On Destroying: WM\_NCDESTROY
   * [Handling Other Messages For Our Control](/inside-our-control/handling-other-messages-for-our-control.md)
 * [Initializing Our Control](/initializing-our-control.md)
@@ -27,6 +27,4 @@
   * [RadASM Auto-complete](/control-properties/radasm-auto-complete.md)
 * [Additional Resources](/additional-resources.md)
   * [The ModernUI Framework](/the-modernui-framework.md)
-
-
 
