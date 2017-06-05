@@ -1,6 +1,6 @@
 # Using Our Control
 
-The end-user will make use of our control **SimpleButton**, using the functions, custom messages, and constants \(properties\) that we define and are available for use in our SimpleButton.inc file.
+The end-user will make use of our control **SimpleButton**, using the functions, custom messages, and constants \(properties\) that we define and are available for use in our `SimpleButton.inc file`.
 
 Just to remind ourselves, these are the **external** functions available to the end-user:
 
@@ -66,7 +66,7 @@ SBBS_AUTOSTATE          EQU 8h  ; Automatically toggle state when clicked.
 
 With our example code above, we create our control with the the text aligned in the center \(`SBBS_CENTER`\) and an option to show a hand cursor when the mouse moves over our control \(`SBBS_HAND`\), and we simulate a small movement of our control when it is clicked  \(`SBBS_PUSHBUTTON`\) - the **SimpleButton** controil moves very slightly down when the left click button is pressed and back again when the left click button is released.
 
-Additional properties of our control which are defined in our SimpleButton.inc file allow us to change the look and feel. This is the full list of properties \(constant values\) that we define for **SimpleButton**:
+Additional properties of our control which are defined in our `SimpleButton.inc` file allow us to change the look and feel. This is the full list of properties \(constant values\) that we define for **SimpleButton**:
 
 ```x86asm
 @SimpleButtonTextFont            EQU 0  ; hFont
@@ -98,7 +98,15 @@ Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColor, SBRGBCOLOR(27,16
 Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColorAlt, SBRGBCOLOR(27,161,226)
 ```
 
-As we have specified the resource id defined for our control \(`IDC_SB1`\), we can handle processing of when our control is clicked using the standard WM\_COMMAND message in our example project's main dialog mesasge processing procedure:
+We can optionally use our custom message `SB_SETPROPERTY` \(instead of the `SimpleButtonSetProperty` function\) with the [SendMessage](https://msdn.microsoft.com/en-us/library/windows/desktop/ms644950%28v=vs.85%29.aspx) api call, to also set our control's properties:
+
+```x86asm
+Invoke SendMessage, hSB1, SB_SETPROPERTY, @SimpleButtonTextColor, SBRGBCOLOR(26,103,140)
+Invoke SendMessage, hSB1, SB_SETPROPERTY, @SimpleButtonBorderColor, SBRGBCOLOR(27,161,226)
+Invoke SendMessage, hSB1, SB_SETPROPERTY, @SimpleButtonBorderColorAlt, SBRGBCOLOR(27,161,226)
+```
+
+As we have specified the resource id defined for our control \(`IDC_SB1`\), we can handle processing of when our control is clicked using the standard `WM_COMMAND` message in our example project's main dialog mesasge processing procedure:
 
 ```x86asm
 ...
@@ -107,13 +115,13 @@ As we have specified the resource id defined for our control \(`IDC_SB1`\), we c
     and eax, 0FFFFh
     .IF eax == IDM_FILE_EXIT
         Invoke SendMessage,hWin,WM_CLOSE,0,0
-			
+
     .ELSEIF eax == IDM_HELP_ABOUT
         Invoke ShellAbout,hWin,addr AppName,addr AboutMsg,NULL
-		
+
     .ELSEIF eax == IDC_SB1 ; handle our SimpleButton being clicked, show a message.
         Invoke MessageBox, NULL, Addr szMsgText, Addr szMsgTitle, MB_OK
-			
+
     .ENDIF
 ...
 ```
