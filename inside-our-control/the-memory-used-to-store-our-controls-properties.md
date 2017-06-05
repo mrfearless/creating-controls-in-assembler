@@ -1,4 +1,4 @@
-# The Memory Used To Store Our Controls Properties
+# The Memory Used To Store Properties
 
 Our `__AllocMemProperties` function which is used in the `WM_CREATE` message of the main processing function `_SB_WndProc`, will allocate the memory size required based on a structure we use \(can use other means, I just felt that it was more convenient to use a structure for better organisation of variables used\).
 
