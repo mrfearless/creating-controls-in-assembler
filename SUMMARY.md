@@ -13,7 +13,7 @@
 * [Creating Our Control](/creating-our-control.md)
 * [Inside Our Control](/inside-our-control.md)
   * [On Creation: WM\_CREATE](inside-our-control/on-creation-wmcreate.md)
-  * On Destroying: WM\_NCDESTROY
+  * [On Destroying: WM\_NCDESTROY](inside-our-control/on-destroying-wmncdestroy.md)
   * [Handling Other Messages For Our Control](/inside-our-control/handling-other-messages-for-our-control.md)
 * [Initializing Our Control](/initializing-our-control.md)
 * [Painting Our Control](/painting-our-control.md)
