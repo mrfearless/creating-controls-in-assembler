@@ -25,6 +25,8 @@ Our `WM_CREATE` message of the `_SB_WndProc` function looks like this:
 
 Our `__AllocMemProperties` internal helper function handles the allocation of memory for our control's properties and stores pointers to the **internal** and **external** properties in the extra window memory reserved by `cbWndExtra` when the control was registered with the [RegisterClassEx](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633587%28v=vs.85%29.aspx) api call in our `SimpleButtonRegister` function. See the section [The Memory Used To Store Properties](/control-properties/the-memory-used-to-store-properties.md) for more details on the `__AllocMemProperties`function.
 
+We define and make use of two structures, one prefixed with an underscore for internal properties and the other for use with external properties. See the section [Property Structures](//inside-our-control/property-structures.md) for more details.
+
 At the end of the `WM_CREATE` message we then call our own initialization routine `_SB_Init` to handle our own setup of our **SimpleButton** control. At this point we can safely assume the memory allocated for our control has been done so, thus we can call our `_SB_Init` function to handle the next step \(see [Initializing Our Control](//initializing-our-control.md)\).
 
 See the [Control Properties](/control-properties.md) section later on for more details on the technical aspect of how we handle setting and getting our control's properties.
