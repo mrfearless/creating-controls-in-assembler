@@ -24,7 +24,9 @@
   * [Using Macros To Get/Set Properties](/control-properties/using-macros-to-getset-properties.md)
   * [Using The Win32 API To Get/Set Properties](/control-properties/using-the-win32-api-to-getset-properties.md)
   * [Internal Wrapper Functions](/control-properties/internal-wrapper-functions.md)
-  * [RadASM Auto-complete](/control-properties/radasm-auto-complete.md)
 * [Additional Resources](/additional-resources.md)
+  * [RadASM Auto-complete](/control-properties/radasm-auto-complete.md)
   * [The ModernUI Framework](/the-modernui-framework.md)
+
+
 
