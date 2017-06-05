@@ -8,5 +8,5 @@ GunnerInc tutorial on dreamincode: [http://www.dreamincode.net/forums/topic/2416
 
 Martin Mitáš codeproject articles: [https://www.codeproject.com/Articles/559385/Custom-Controls-in-Win-API-The-Basics](https://www.codeproject.com/Articles/559385/Custom-Controls-in-Win-API-The-Basics)
 
-
+Forhad Reza codeproject article - Clock Frame Design Using Assembly: [https://www.codeproject.com/Tips/1039519/Clock-Frame-Design-Using-Assembly](https://www.codeproject.com/Tips/1039519/Clock-Frame-Design-Using-Assembly)
 
