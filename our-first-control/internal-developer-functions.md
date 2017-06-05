@@ -12,6 +12,8 @@ _SB_PaintText           PROTO :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD
 _SB_PaintBorder         PROTO :DWORD, :DWORD, :DWORD, :DWORD, :DWORD, :DWORD
 ```
 
+These **internal** functions are the core functions that handle the main processing and painting of our **SimpleButton** control. 
+
 In addition, we will define a few other internal helper functions for use in this control. In my own development projects I combine the functions next into a library or framework for easy re-use, but I have recreated them here and included them in the `SimpleButton.asm` file just for ease of use and clarity in covering the features in the control. The internal helper functions are:
 
 ```x86asm
@@ -23,7 +25,7 @@ __GetExtProperty         PROTO :DWORD, :DWORD
 __SetExtProperty         PROTO :DWORD, :DWORD, :DWORD
 ```
 
-##### 
+These functions are briefly covered later on \(see [Inside Our Control](//inside-our-control.md)\) and some more detail can be found in the [Control Properties](/control-properties.md) section.
 
 
 
