@@ -1,6 +1,6 @@
 # RadASM Auto-complete
 
-Another reason I used this approach of defining properties as constants, is RadASM's auto-complete feature. By editing two .api files and adding some information I can include this information to make it easier to code using the **SimpleButton** control and other controls. 
+Another reason I used the approach of defining properties as constants, is RadASM's auto-complete feature. By editing two .api files and adding some information I can include this information to make it easier to code using the **SimpleButton** control and other controls.
 
 So I easily can add autocomplete for the `SimpleButtonGetProperty` function and it will show a dropdown list of possible values when I am ready to supply the 2nd parameter \(`dwProperty`\)
 
