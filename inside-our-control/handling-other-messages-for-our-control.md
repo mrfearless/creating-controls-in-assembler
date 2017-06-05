@@ -52,20 +52,28 @@ We can also allow our **SimpleButton** control to be enabled or disabled via a s
     Invoke __SetExtProperty, hWin, @SimpleButtonTextFont, lParam
     .IF lParam == TRUE
         Invoke InvalidateRect, hWin, NULL, TRUE
-    .ENDIF  
+    .ENDIF
 ```
 
-Our custom messages \(`SB_GETPROPERTY` and `SB_SETPROPERTY`\) are included as well and are just simple calls to our internal helper functions \(or framework library if using one\):
+Our custom messages \(`SB_GETPROPERTY` ,`SB_SETPROPERTY`, `SB_GETSTATE` and `SB_SETSTATE`\) are included as well and are just simple calls to our internal helper functions \(or framework library if using one\):
 
 ```x86asm
 ...
-.ELSEIF eax == SB_GETPROPERTY
-    Invoke __GetExtProperty, hWin, wParam
+.ELSEIF eax == SB_GETPROPERTY ; wParam = dwProperty, lParam = NULL. 
+    Invoke __GetExtProperty, hWin, wParam ; EAX = dwPropertyValue
     ret
 
-.ELSEIF eax == SB_SETPROPERTY   
+.ELSEIF eax == SB_SETPROPERTY ; wParam = dwProperty, lParam = dwPropertyValue
     Invoke __SetExtProperty, hWin, wParam, lParam
     ret
+.ELSEIF eax == SB_GETSTATE ; wParam = NULL, lParam = NULL. 
+    Invoke __GetIntProperty, hWin, @SimpleButtonSelectedState ; EAX = dwState
+    ret
+	 
+.ELSEIF eax == SB_SETSTATE ; wParam = TRUE/FALSE, lParam = NULL
+    Invoke __SetIntProperty, hWin, @SimpleButtonSelectedState, wParam
+    Invoke InvalidateRect, hWin, NULL, TRUE ; repaint control
+    ret    
 ...
 ```
 
