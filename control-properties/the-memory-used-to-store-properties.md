@@ -16,7 +16,5 @@ Internally the `__AllocaMemProperties` function calls either of the following:
 
 `PtrAllocMem` is the pointer to our memory that was allocated using [GlobalAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366574%28v=vs.85%29.aspx) from within `__AllocMemProperties`
 
-At the end of the `WM_CREATE` message we then call our own initialization routine `_SB_Init` to handle our own setup of our **SimpleButton** control. At this point we can safely assume the memory allocated for our control has been done so, thus we can call our `_SB_Init` function to handle the next step \(see [Initializing Our Control](//initializing-our-control.md)\).
 
-See the [Control Properties](/control-properties.md) section later on for more details on the technical aspect of how we handle setting and getting our control's properties.
 
