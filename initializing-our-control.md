@@ -49,7 +49,7 @@ Here is our what our **SimpleButton** control will look like, in the image below
 
 ![](/assets/SimpleButtonDemoDefaults.gif)
 
-Note that it doesnt make use of the blue text color and border shown in our earlier image in the [Our First Control section](//our-first-control.md).
+Note that it doesnt make use of the blue text color and border shown in our earlier image in the [Our First Control](//our-first-control.md) section.
 
 So by implementing this initialization routine for the end-user, it means they can use the **SimpleButton** control straight away, or they can choose to modify any of the **external** properties to customize it to their requirements after the control is created, whichever suits. See the [Control Properties](/control-properties.md) section later on for more details.
 
