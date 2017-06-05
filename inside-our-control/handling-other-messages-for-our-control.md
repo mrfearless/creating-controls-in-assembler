@@ -1,6 +1,6 @@
 # Handling Other Messages For Our Control
 
-Along with handling the `WM_CREATE` message, we have to handle a few more, for when the control is destroyed, when it is painted and other features such as mouse and keyboard interaction \(if applicable to our control\).
+Along with handling the `WM_CREATE` & `WM_NCDESTROY`messages, we have to handle a few more: enabling/disabling our control, setting text, setting fonts, when our control is painted and other features we may wish to include, such as mouse and keyboard interaction \(if applicable to our control\).
 
 We handle our own painting in our **SimpleButton** like so with these two messages:
 
@@ -17,7 +17,7 @@ We handle our own painting in our **SimpleButton** like so with these two messag
 ...
 ```
 
-We are specifying that we will handle erasing of our control's background ourself and painting of our **SimpleButton** control via our own paint function `_SB_Paint` see [Painting Our Control](//painting-our-control.md) for more details.
+With the above code, we are specifying that we will handle erasing of our control's background ourself and painting of our **SimpleButton** control via our own paint function `_SB_Paint` see [Painting Our Control](//painting-our-control.md) for more details.
 
 We can also allow our **SimpleButton** control to be enabled or disabled via a standard `WM_ENABLE` message, which forces a repaint of our control. And similarly we can allow a font change and repaint via a `WM_SETFONT` message.
 
