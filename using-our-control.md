@@ -16,10 +16,10 @@ SimpleButtonSetState    PROTO :DWORD, :DWORD
 And the custom messages for our control are:
 
 ```x86asm
-SB_GETPROPERTY           EQU WM_USER + 1800
-SB_SETPROPERTY           EQU WM_USER + 1799
-SB_GETSTATE              EQU WM_USER + 1798
-SB_SETSTATE              EQU WM_USER + 1797
+SB_GETPROPERTY          EQU WM_USER + 1800
+SB_SETPROPERTY          EQU WM_USER + 1799
+SB_GETSTATE             EQU WM_USER + 1798
+SB_SETSTATE             EQU WM_USER + 1797
 ```
 
 With very little code we can create our control, all we need to define is the text to display and the resource id we will use for our control:
@@ -57,11 +57,11 @@ Our `SimpleButtonCreate` function takes a number of parameters:
 The `dwStyle` parameter can accept windows style flags: `WS_CHILD`, `WS_VISIBLE`, and flags we defined for our controls usage in `SimpleButton.inc`:
 
 ```x86asm
-SBBS_CENTER                EQU 0h  ; Align text centrally (default)
-SBBS_LEFT                  EQU 1h  ; Align text to the left of the button
-SBBS_HAND                  EQU 2h  ; Show a hand cursor when mouse over button.
-SBBS_PUSHBUTTON            EQU 4h  ; Simulate button movement when mouse clicks on button
-SBBS_AUTOSTATE             EQU 8h  ; Automatically toggle between TRUE/FALSE state when clicked. TRUE = Selected.
+SBBS_CENTER              EQU 0h  ; Align text centrally (default)
+SBBS_LEFT                EQU 1h  ; Align text to the left of the button
+SBBS_HAND                EQU 2h  ; Show a hand cursor when mouse over button.
+SBBS_PUSHBUTTON          EQU 4h  ; Simulate button movement when mouse clicks on button
+SBBS_AUTOSTATE           EQU 8h  ; Automatically toggle between TRUE/FALSE state when clicked. TRUE = Selected.
 ```
 
 
