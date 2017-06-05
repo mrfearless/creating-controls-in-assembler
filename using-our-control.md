@@ -66,3 +66,43 @@ SBBS_AUTOSTATE          EQU 8h  ; Automatically toggle state when clicked.
 
 With our example code above, we create our control with the the text aligned in the center \(`SBBS_CENTER`\) and an option to show a hand cursor when the mouse moves over our control \(`SBBS_HAND`\), and we simulate a small movement of our control when it is clicked  \(`SBBS_PUSHBUTTON`\) - the **SimpleButton** controil moves very slightly down when the left click button is pressed and back again when the left click button is released.
 
+Additional properties of our control which are defined in our SimpleButton.inc file allow us to change the look and feel. This is the full list of properties \(constant values\) that we define for **SimpleButton**:
+
+```x86asm
+@SimpleButtonTextFont            EQU 0  ; hFont
+@SimpleButtonTextColor           EQU 4  ; Colorref
+@SimpleButtonTextColorAlt        EQU 8  ; Colorref
+@SimpleButtonTextColorSel        EQU 12 ; Colorref
+@SimpleButtonTextColorSelAlt     EQU 16 ; Colorref
+@SimpleButtonTextColorDisabled   EQU 20 ; Colorref
+@SimpleButtonBackColor           EQU 24 ; Colorref
+@SimpleButtonBackColorAlt        EQU 28 ; Colorref
+@SimpleButtonBackColorSel        EQU 32 ; Colorref
+@SimpleButtonBackColorSelAlt     EQU 36 ; Colorref
+@SimpleButtonBackColorDisabled   EQU 40 ; Colorref
+@SimpleButtonBorderColor         EQU 44 ; Colorref
+@SimpleButtonBorderColorAlt      EQU 48 ; Colorref
+@SimpleButtonBorderColorSel      EQU 52 ; Colorref
+@SimpleButtonBorderColorSelAlt   EQU 56 ; Colorref
+@SimpleButtonBorderColorDisabled EQU 60 ; Colorref
+@SimpleButtonBorderStyle         EQU 64 ; Border Style Flags
+```
+
+The end-user can choose which properties are set, with default values having been applied to the control when we initialized it \(see [Initializing Our Control](//initializing-our-control.md) section for details\)
+
+For example we can set the text color of our control, the border color and the border color when the mouse moves over our control:
+
+```x86asm
+Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonTextColor, SBRGBCOLOR(26,103,140)
+Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColor, SBRGBCOLOR(27,161,226)
+Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColorAlt, SBRGBCOLOR(27,161,226)
+```
+
+        
+
+
+
+
+
+
+
