@@ -18,13 +18,11 @@
 * [Using Our Control](/using-our-control.md)
 * [Control Properties](control-properties.md)
   * [The Memory Used To Store Properties](control-properties/the-memory-used-to-store-properties.md)
-  * [Property Structures](/inside-our-control/property-structures.md)
+  * [Property Structures & Constants](/inside-our-control/property-structures.md)
   * [Using Macros To Get/Set Properties](control-properties/using-macros-to-getset-properties.md)
   * [Using The Win32 API To Get/Set Properties](control-properties/using-the-win32-api-to-getset-properties.md)
   * [Internal Wrapper Functions](control-properties/internal-wrapper-functions.md)
   * [RadASM Auto-complete](control-properties/radasm-auto-complete.md)
 * [Additional Resources](additional-resources.md)
   * [The ModernUI Framework](the-modernui-framework.md)
-
-
 
