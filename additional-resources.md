@@ -14,3 +14,16 @@ Other online tutorials about custom contol creation:
 
 
 
+Assemblers:
+
+| Name | Website |
+| :--- | :--- |
+| MASM32 SDK | [www.masm32.com/download/](/www.masm32.com/download/) |
+| UASM \(formerly JWasm/HJWasm\) | [www.terraspace.co.uk/uasm.html](/www.terraspace.co.uk/uasm.html) |
+
+
+
+
+
+
+
