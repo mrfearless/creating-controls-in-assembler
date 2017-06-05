@@ -13,7 +13,7 @@ _SIMPLEBUTTON_PROPERTIES   STRUCT
 _SIMPLEBUTTON_PROPERTIES   ENDS
 ```
 
-with the variables \(or properties\) used, defined as:
+with the **internal** variables \(or properties\) used, defined as:
 
 ```x86asm
 @SimpleButtonEnabledState  EQU 0
@@ -24,5 +24,31 @@ with the variables \(or properties\) used, defined as:
 
 So the memory block that the four internal variables are stored in, start at offset 0 for the first one, offset 4 for the next and so on \(assuming all variables are dword values of course\). We will see later on getting and setting these internal and external variables using the helper functions: `__GetIntProperty`, `__SetIntProperty`, `__GetExtProperty` and `__SetExtProperty`.
 
-The external properties and structure is defined similarly in the `SimpleButton.inc` file for the end-user. Typically the end-user wont make use of the structure directly, its just added as a convienance - mainly for the use by the developer. It is easier to use `SIZEOF` _structurename_ to pass to the `__AllocMemProperties` function to determine the size of memory to allocate for our control's properties.
+The **external** properties and structure \(`SIMPLEBUTTON_PROPERTIES)`\) is defined similarly in the `SimpleButton.inc` file for the end-user. Typically the end-user wont make use of the structure directly, its just added as a convienance - mainly for the use by the developer. It is easier to use `SIZEOF` _structurename_ to pass to the `__AllocMemProperties` function to determine the size of memory to allocate for our control's properties.
+
+Here is the list of **external** properties that we define for the end-user:
+
+```x86asm
+@SimpleButtonTextFont            EQU 0  ; hFont
+@SimpleButtonTextColor           EQU 4  ; Colorref
+@SimpleButtonTextColorAlt        EQU 8  ; Colorref
+@SimpleButtonTextColorSel        EQU 12 ; Colorref
+@SimpleButtonTextColorSelAlt     EQU 16 ; Colorref
+@SimpleButtonTextColorDisabled   EQU 20 ; Colorref
+@SimpleButtonBackColor           EQU 24 ; Colorref
+@SimpleButtonBackColorAlt        EQU 28 ; Colorref
+@SimpleButtonBackColorSel        EQU 32 ; Colorref
+@SimpleButtonBackColorSelAlt     EQU 36 ; Colorref
+@SimpleButtonBackColorDisabled   EQU 40 ; Colorref
+@SimpleButtonBorderColor         EQU 44 ; Colorref
+@SimpleButtonBorderColorAlt      EQU 48 ; Colorref
+@SimpleButtonBorderColorSel      EQU 52 ; Colorref
+@SimpleButtonBorderColorSelAlt   EQU 56 ; Colorref
+@SimpleButtonBorderColorDisabled EQU 60 ; Colorref
+@SimpleButtonBorderStyle         EQU 64 ; Border Style Flags
+```
+
+
+
+
 
