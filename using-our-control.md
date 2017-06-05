@@ -98,11 +98,25 @@ Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColor, SBRGBCOLOR(27,16
 Invoke SimpleButtonSetProperty, hSB1, @SimpleButtonBorderColorAlt, SBRGBCOLOR(27,161,226)
 ```
 
-        
+As we have specified the resource id defined for our control \(`IDC_SB1`\), we can handle processing of when our control is clicked using the standard WM\_COMMAND message in our example project's main dialog mesasge processing procedure:
 
-
-
-
+```x86asm
+...
+.ELSEIF eax == WM_COMMAND
+    mov eax, wParam
+    and eax, 0FFFFh
+    .IF eax == IDM_FILE_EXIT
+        Invoke SendMessage,hWin,WM_CLOSE,0,0
+			
+    .ELSEIF eax == IDM_HELP_ABOUT
+        Invoke ShellAbout,hWin,addr AppName,addr AboutMsg,NULL
+		
+    .ELSEIF eax == IDC_SB1 ; handle our SimpleButton being clicked, show a message.
+        Invoke MessageBox, NULL, Addr szMsgText, Addr szMsgTitle, MB_OK
+			
+    .ENDIF
+...
+```
 
 
 
