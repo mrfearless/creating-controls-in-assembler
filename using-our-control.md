@@ -62,9 +62,7 @@ SBBS_LEFT               EQU 1h  ; Align text to the left of the button
 SBBS_HAND               EQU 2h  ; Show a hand when mouse moves over button.
 SBBS_PUSHBUTTON         EQU 4h  ; Simulate button movement when clicked.
 SBBS_AUTOSTATE          EQU 8h  ; Automatically toggle state when clicked.
-
-
 ```
 
-
+With our example code above, we create our control with the the text aligned in the center \(`SBBS_CENTER`\) and an option to show a hand cursor when the mouse moves over our control \(`SBBS_HAND`\), and we simulate a small movement of our control when it is clicked  \(`SBBS_PUSHBUTTON`\) - the **SimpleButton** controil moves very slightly down when the left click button is pressed and back again when the left click button is released.
 
