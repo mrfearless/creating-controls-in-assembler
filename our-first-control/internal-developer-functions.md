@@ -1,4 +1,4 @@
-# Internal Developer Functions
+# Internal Functions
 
 Functions that will defined for use **internally** by the control will be:
 
