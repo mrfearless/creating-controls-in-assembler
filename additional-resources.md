@@ -9,7 +9,7 @@ Other online tutorials about custom contol creation:
 | Forhad Reza | Clock Frame Design Using Assembly | [www.codeproject.com/Tips/1039519/Clock-Frame-Design-Using-Assembly](https://www.codeproject.com/Tips/1039519/Clock-Frame-Design-Using-Assembly) |
 | ZetCode | Burning Control | [www.zetcode.com/gui/winapi/customcontrols/ ](/www.zetcode.com/gui/winapi/customcontrols/ ) |
 | Catch22 | Custom Controls | [www.catch22.net/tuts/custom-controls](http://www.catch22.net/tuts/custom-controls) |
-| DrDobbs | Writing Windows Custom Controls \(VCR Style Button\) | [www.drdobb.com/windows/writing-windows-custom-controls/184409155](/www.drdobb.com/windows/writing-windows-custom-controls/184409155) |
+| Dan Brindle | Writing Windows Custom Controls \(VCR Style Button\) | [www.drdobbs.com/windows/writing-windows-custom-controls/184409155](/www.drdobbs.com/windows/writing-windows-custom-controls/184409155) |
 | Flounder | Self-Registering Windows Classes \(Compass Control\) | [www.flounder.com/selfregister.htm](/www.flounder.com/selfregister.htm) |
 |  |  |  |
 
