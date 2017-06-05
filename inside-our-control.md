@@ -4,7 +4,7 @@
 
 We wont cover all the messages implemented in the `_SB_WndProc`, see the code for the full project if you wish to see more detail. We will cover a few important messages that the control handles.
 
-##### Handling The First Message: WM\_CREATE vs WM\_NCCREATE
+##### 
 
 
 
