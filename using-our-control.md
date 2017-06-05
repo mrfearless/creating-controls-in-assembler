@@ -44,7 +44,7 @@ Invoke SimpleButtonCreate, hWin, Addr SBText, 40, 60, 200, 30, IDC_SB1, /
 mov hSB1, eax ; save handle to our control
 ```
 
-Our `SimpleButtonCreate` function takes a number of parameters: 
+Our `SimpleButtonCreate` function takes a number of parameters:
 
 * `hWndParent` \(`DWORD`\) is the parent handle of our main dialog window, with which to create a child control for.
 * `xpos` \(`DWORD`\) is the left position of our control relative to the parent's client space.
@@ -53,6 +53,16 @@ Our `SimpleButtonCreate` function takes a number of parameters:
 * `controlheight` \(`DWORD`\) is the height of our control
 * `dwResourceID` \(`DWORD`\) is the resource id used by our control
 * `dwStyle` \(`DWORD`\) is a combination of constants \(flags\) that define some features of our control.
+
+The `dwStyle` parameter can accept windows style flags: `WS_CHILD`, `WS_VISIBLE`, and flags we defined for our controls usage in `SimpleButton.inc`:
+
+```x86asm
+SBBS_CENTER                EQU 0h  ; Align text centrally (default)
+SBBS_LEFT                  EQU 1h  ; Align text to the left of the button
+SBBS_HAND                  EQU 2h  ; Show a hand cursor when mouse over button.
+SBBS_PUSHBUTTON            EQU 4h  ; Simulate button movement when mouse clicks on button
+SBBS_AUTOSTATE             EQU 8h  ; Automatically toggle between TRUE/FALSE state when clicked. TRUE = Selected.
+```
 
 
 
