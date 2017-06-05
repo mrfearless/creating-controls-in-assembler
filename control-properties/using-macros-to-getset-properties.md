@@ -14,7 +14,7 @@ With the constants defined and appropriate named \(using a prefix of '@'\) we co
 
 The macros then called the [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) or [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx) to get or set the value at the appropriate index offset.
 
-Here is and example of two macros used to get and set the font handle - stored at index offset `0x12`
+Here is and example of some macros used to get and set the various 'properties' as defined above as constants:
 
 ```x86asm
 _GetFont MACRO hControl:REQ
@@ -26,7 +26,7 @@ _SetFont MACRO hControl:REQ, ptrControlData:REQ
 ENDM
 
 _GetMouseOverFlag MACRO hControl:REQ
-    Invoke GetWindowLong, hControl, @MouseOverFlag		
+    Invoke GetWindowLong, hControl, @MouseOverFlag        
 ENDM
 
 _SetMouseOverFlag MACRO hControl:REQ, ptrControlData:REQ
@@ -64,5 +64,5 @@ mov bState, eax
 ...
 ```
 
-This is still a valid technique if the amount of bytes is less than 40. Or even using the [GetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633564%28v=vs.85%29.aspx) / [SetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633568%28v=vs.85%29.aspx) api calls is viable if using an atom - which is faster than [GetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633564%28v=vs.85%29.aspx) / [SetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633568%28v=vs.85%29.aspx) with a string, but both are still slower than [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) / [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx) as far as I am aware.
+Using macros to get and set our control's properties is still a valid technique if the amount of data store for these properties is less than 40 bytes. It is also possible to make use of the [GetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633564%28v=vs.85%29.aspx) / [SetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633568%28v=vs.85%29.aspx) api calls, which make use of atoms - which is faster than [GetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633564%28v=vs.85%29.aspx) / [SetProp](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633568%28v=vs.85%29.aspx) with a string, but both are still slower than [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) / [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx) as far as I am aware.
 
