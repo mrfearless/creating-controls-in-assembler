@@ -106,7 +106,7 @@ Invoke SendMessage, hSB1, SB_SETPROPERTY, @SimpleButtonBorderColor, SBRGBCOLOR(2
 Invoke SendMessage, hSB1, SB_SETPROPERTY, @SimpleButtonBorderColorAlt, SBRGBCOLOR(27,161,226)
 ```
 
-As we have specified the resource id defined for our control \(`IDC_SB1`\), we can handle processing of when our control is clicked using the standard `WM_COMMAND` message in our example project's main dialog mesasge processing procedure:
+As we have specified the resource id defined for our control \(`IDC_SB1`\), we can handle processing of when our control is clicked using the standard `WM_COMMAND` message in our example project's main dialog message processing procedure:
 
 ```x86asm
 ...
@@ -126,5 +126,5 @@ As we have specified the resource id defined for our control \(`IDC_SB1`\), we c
 ...
 ```
 
-
+In the example code above, we show a simple [MessageBox](https://msdn.microsoft.com/en-us/library/windows/desktop/ms645505%28v=vs.85%29.aspx) when our SimpleButton is clicked.
 
