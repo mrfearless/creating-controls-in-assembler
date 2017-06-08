@@ -31,5 +31,9 @@ For those that are interested in contributing to the project, the main design do
 > * Add new control types to reflect newer UI/UX design influences.
 > * Emulate control types from UWP, WPF, .Net & Web 2.0 platforms.
 
+Here are some examples of dialogs and controls created and using the ModernUI framework and associated controls:
 
+![](/assets/CodeShotOptions.gif)
+
+![](/assets/x64dbgUpdateChecker.gif)
 
