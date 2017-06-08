@@ -21,7 +21,7 @@ The current list of controls that are available are:
 * `ModernUI_Checkbox`
 * `ModernUI_SmartPanel`
 
-In addition to the released controls, I have included some RadASM project as examples of usage for each control. Also there is RadASM Auto-complete .api text files, and RadASM custom control .dll files that help the end-user implement the current list of controls, within RadASM and allow the end-user to specify some of the initial style flags. Some icons for use with GUI are also included in the releases section along with the other files listed above.
+In addition to the released controls, I have included some RadASM project as examples of usage for each control. Also there is RadASM auto-complete / intelliSense .api text files, and RadASM custom control .dll files that help the end-user implement the current list of controls, within RadASM and allow the end-user to specify some of the initial style flags. Some icons for use with GUI are also included in the releases section along with the other files listed above.
 
 For those that are interested in contributing to the project, the main design document of the project is on the wiki, here is the introduction of the design document:
 
