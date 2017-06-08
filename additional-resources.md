@@ -12,14 +12,27 @@ Other online tutorials about custom contol creation:
 | Dan Brindle | Writing Windows Custom Controls \(VCR Style Button\) | [www.drdobbs.com/windows/writing-windows-custom-controls/184409155](/www.drdobbs.com/windows/writing-windows-custom-controls/184409155) |
 | Joseph M. Newcomer | Self-Registering Windows Classes \(Compass Control\) | [www.flounder.com/selfregister.htm](/www.flounder.com/selfregister.htm) |
 
-
-
 Assemblers:
 
 | Name | Website |
 | :--- | :--- |
 | MASM32 SDK | [www.masm32.com/download/](/www.masm32.com/download/) |
 | UASM \(formerly JWasm/HJWasm\) | [www.terraspace.co.uk/uasm.html](/www.terraspace.co.uk/uasm.html) |
+
+Additional Resources:
+
+| Name | Website |
+| :--- | :--- |
+| ModernUI Project | [https://github.com/mrfearless/ModernUI](https://github.com/mrfearless/ModernUI) |
+| ModernUI64 Project | [https://github.com/mrfearless/ModernUI64](https://github.com/mrfearless/ModernUI64) |
+| RadASM | [https://github.com/mrfearless/RadASM2](https://github.com/mrfearless/RadASM2) |
+| x64dbg x86 & x64 Debugger | [https://github.com/x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) |
+
+
+
+
+
+
 
 
 
