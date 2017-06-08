@@ -19,7 +19,7 @@ Assemblers:
 | MASM32 SDK | [www.masm32.com/download/](/www.masm32.com/download/) |
 | UASM \(formerly JWasm/HJWasm\) | [www.terraspace.co.uk/uasm.html](/www.terraspace.co.uk/uasm.html) |
 
-Additional Resources:
+Other Resources:
 
 | Name | Website |
 | :--- | :--- |
@@ -27,16 +27,6 @@ Additional Resources:
 | ModernUI64 Project | [https://github.com/mrfearless/ModernUI64](https://github.com/mrfearless/ModernUI64) |
 | RadASM | [https://github.com/mrfearless/RadASM2](https://github.com/mrfearless/RadASM2) |
 | x64dbg x86 & x64 Debugger | [https://github.com/x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) |
-
-
-
-
-
-
-
-
-
-
 
 
 
