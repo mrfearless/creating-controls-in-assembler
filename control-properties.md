@@ -1,6 +1,6 @@
 # Control Properties
 
-This section and the topics within it should be considered a bit more technical in nature. They cover more in depth the details on the techniques used for defining, allocating memory for, and setting/getting a control's properties. 
+This section and the topics within it should be considered a bit more technical in nature. They cover more in depth the details on the techniques used for defining, allocating memory for, and setting/getting a control's properties.
 
 When registering our custom control \(see [Registering Our Control](//registering-our-control.md) for details\), the `cbWndExtra` field of the [WNDCLASSEX](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633577%28v=vs.85%29.aspx) is used for storing additional extra bytes per instance of the control we create.
 
@@ -14,7 +14,7 @@ In the early days of my control creation I used these extra storage bytes to sto
 >
 > The SetWindowLong function copies a value to the extra memory. The GetWindowLong function retrieves a value from the extra memory. The cbWndExtra member of the WNDCLASSEX structure specifies the amount of extra window memory to allocate. An application that does not use the memory must initialize cbWndExtra to zero.
 
-Once the extra bytes are allocated, they can accessed and read via calls to [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) \(or [GetWindowLongPtr](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633585%28v=vs.85%29.aspx) if compiling for x64\) and passing the handle of the window \(our control's handle\) and an index offset to the bytes required. For setting the values we use the calls to [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx) \(or [SetWindowLongPtr](https://msdn.microsoft.com/en-us/library/windows/desktop/ms644898%28v=vs.85%29.aspx) if compiling for x64\), again passing the window handle, an offset to the bytes to be set and a value to set.
+Once the extra bytes are allocated, they can accessed and read via calls to [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) and passing the handle of the window \(our control's handle\) and an index offset to the bytes required. For setting the values we use the calls to [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx), again passing the window handle, an offset to the bytes to be set and a value to set.
 
 ##### 
 
