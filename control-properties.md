@@ -16,13 +16,3 @@ In the early days of my control creation I used these extra storage bytes to sto
 
 Once the extra bytes are allocated, they can accessed and read via calls to [GetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633584%28v=vs.85%29.aspx) and passing the handle of the window \(our control's handle\) and an index offset to the bytes required. For setting the values we use the calls to [SetWindowLong](https://msdn.microsoft.com/en-us/library/windows/desktop/ms633591%28v=vs.85%29.aspx), again passing the window handle, an offset to the bytes to be set and a value to set.
 
-##### 
-
-##### 
-
-##### 
-
-##### 
-
-
-
