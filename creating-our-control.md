@@ -10,7 +10,7 @@ The most useful information I came across that explains the `dwStyle` flags para
 
 > The low 16 bits of the dwStyle parameter are defined by the implementer of the window class \(by the person who calls RegisterClass\)
 
-That means we have `0x0` - `0xFFFF` reserved for defining styles for our controls. And we can incorporate the standard style flags as well if we so desire \(`WS_BORDER`, `WS_VISIBLE` etc\). So our **SimpleButton** styles we will use are:
+That means we have `0x0` - `0xFFFF` reserved for defining styles for our controls - 65535 possible values or 16 values if we require bitmasked unique values \(1111111111111111\). And we can incorporate the standard style flags as well if we so desire \(`WS_BORDER`, `WS_VISIBLE` etc\). So our **SimpleButton** styles we will use are:
 
 ```x86asm
 ; SimpleButton Button Styles:
